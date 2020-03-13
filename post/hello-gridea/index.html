@@ -1,6 +1,8 @@
-<html>
-  <head>
-    <meta charset="utf-8">
+<!doctype html>
+<html amp lang="zh">
+
+<head>
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <meta name="description" content="温故而知新" />
 <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
@@ -24,7 +26,7 @@
 
   @font-face {
     font-family: "iconfont";
-    src: url("https://jiansing.github.io/fonts/iconfont.eot?raw=true") format("embedded-opentype"), url("https://jiansing.github.io/fonts/iconfont.woff2?raw=true") format("woff2"), url("https://jiansing.github.io/fonts/iconfont.woff?raw=true") format("woff"), url("https://jiansing.github.io/fonts/iconfont.ttf?raw=true") format("truetype"), url("https://jiansing.github.io/fonts/iconfont.svg") format("svg")
+    src: url("https://jiansing.github.io/media/fonts/iconfont.eot?raw=true") format("embedded-opentype"), url("https://jiansing.github.io/media/fonts/iconfont.woff2?raw=true") format("woff2"), url("https://jiansing.github.io/media/fonts/iconfont.woff?raw=true") format("woff"), url("https://jiansing.github.io/media/fonts/iconfont.ttf?raw=true") format("truetype"), url("https://jiansing.github.io/media/fonts/iconfont.svg") format("svg")
   }
 
   @font-face {
@@ -32,7 +34,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local("PT Serif"), local("PTSerif-Regular"), url("https://jiansing.github.io/fonts/ptserif.woff2?raw=true") format("woff2");
+    src: local("PT Serif"), local("PTSerif-Regular"), url("https://jiansing.github.io/media/fonts/ptserif.woff2?raw=true") format("woff2");
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
   }
 
@@ -42,6 +44,7 @@
     -moz-osx-font-smoothing: grayscale
   }
 
+  textarea,
   input[type="password"],
   input[type="text"],
   input[type="url"],
@@ -49,6 +52,19 @@
   input[type="submit"] {
     -webkit-appearance: none;
     border-radius: 0
+  }
+
+  .content p[class^="amp-wp"] {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1vw;
+    line-height: 1
+  }
+
+  @media only screen and (max-width: 640px) {
+    .content p[class^="amp-wp"] {
+      padding: 3vw
+    }
   }
 
   header {
@@ -505,45 +521,6 @@
     width: 48.2143vw
   }
 
-  .list-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2.9762vw
-  }
-
-  .title-img {
-    width: 48.2143vw;
-    height: 17.8571vw;
-    position: relative
-  }
-
-  .title-img amp-img.contain img {
-    object-fit: cover;
-    object-position: top;
-    transition: all .5s
-  }
-
-  a.title-img:hover amp-img.contain img {
-    object-fit: cover;
-    transform: scale(1.08);
-    -webkit-transform: scale(1.08);
-    -moz-transform: scale(1.08)
-  }
-
-  .post-info {
-    position: relative;
-    padding-left: 1.7857vw;
-    padding-top: 1.5119vw;
-    padding-right: 1.7857vw;
-    padding-bottom: 1.7857vw;
-    width: 48.2143vw;
-    border: .0595vw solid #e6e6e6;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column
-  }
-
   .post-cate {
     font-size: .9524vw;
     line-height: 1.5476vw;
@@ -568,42 +545,6 @@
     display: none
   }
 
-  .post-title {
-    font-size: 1.3613vw;
-    line-height: 2.381vw;
-    margin-top: .5952vw;
-    margin-bottom: 0;
-    width: 39.881vw;
-    word-break: break-all
-  }
-
-  .post-title:after {
-    display: flex;
-    content: "";
-    width: 4.1667vw;
-    height: .2976vw;
-    background: #dbb302;
-    margin-top: .7321vw
-  }
-
-  .post-title a {
-    text-decoration: none;
-    color: #000
-  }
-
-  .post-excerpt {
-    margin-top: 1.4286vw;
-    margin-bottom: 1.1905vw;
-    font-size: .9524vw;
-    line-height: 1.6667vw;
-    color: #8a8a8a;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-    visibility: visible
-  }
-
   .flex-box {
     display: flex;
     align-items: center
@@ -612,40 +553,6 @@
   .meta-category {
     flex-wrap: wrap;
     padding-right: 4.1667vw
-  }
-
-  .justify-between {
-    justify-content: space-between
-  }
-
-  .read-more {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: .8333vw;
-    line-height: .8333vw;
-    text-decoration: none;
-    min-width: 9.1667vw;
-    min-height: 2.1429vw;
-    box-sizing: border-box;
-    padding-left: 1.1905vw;
-    padding-right: 1.1905vw;
-    padding-top: .7143vw;
-    padding-bottom: .7143vw;
-    color: #dbb302;
-    border: .0595vw #dbb302 solid;
-    transition: all .2s;
-    text-transform: uppercase
-  }
-
-  .read-more:hover {
-    background: #dbb302;
-    color: white
-  }
-
-  .icon-ml-readmore {
-    margin-left: .625vw;
-    font-size: 1.1905vw
   }
 
   .post-meta-box {
@@ -671,71 +578,6 @@
     font-size: 1.1905vw
   }
 
-  .post-publish-date {
-    width: 4.1667vw;
-    height: 4.7619vw;
-    background: #f6f6f7;
-    position: absolute;
-    right: 1.2501vw;
-    top: -.8333vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center
-  }
-
-  .post-publish-date .post-date {
-    color: #dbb302;
-    font-size: 1.3095vw;
-    line-height: 2.2916vw;
-    font-weight: bold
-  }
-
-  .post-publish-date .post-month {
-    color: #000;
-    font-size: .8333vw;
-    line-height: 1.4583vw;
-    text-transform: uppercase
-  }
-
-  .list-box:last-child {
-    margin-bottom: 2.381vw
-  }
-
-  .pagination .screen-reader-text {
-    display: none
-  }
-
-  .nav-links {
-    margin-top: 2.9762vw;
-    margin-bottom: 2.9762vw;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap
-  }
-
-  .nav-links .page-numbers {
-    min-width: 2.1429vw;
-    height: 2.1429vw;
-    border: .0595vw #dbb302 solid;
-    color: #dbb302;
-    font-size: 1.0714vw;
-    line-height: 1.0714vw;
-    text-decoration: none;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: .4762vw;
-    margin-right: .4762vw;
-    margin-bottom: .4762vw;
-    box-sizing: border-box
-  }
-
-  .nav-links .current,
-  .nav-links a.page-numbers:hover {
-    background: #dbb302;
-    color: white
-  }
-
   @media only screen and (max-width: 640px) {
     main {
       width: 100%;
@@ -746,34 +588,6 @@
 
     .main-container {
       width: 92vw
-    }
-
-    .title-img {
-      width: 92vw;
-      height: 34.1333vw
-    }
-
-    .post-info {
-      width: 92vw;
-      padding: 3.4667vw;
-      border: .2667vw solid #e6e6e6
-    }
-
-    .post-publish-date {
-      width: 10.6667vw;
-      height: 12.1333vw;
-      top: -2vw;
-      right: 2.8vw
-    }
-
-    .post-publish-date .post-date {
-      font-size: 3.4667vw;
-      line-height: 6.0667vw
-    }
-
-    .post-publish-date .post-month {
-      font-size: 2.1333vw;
-      line-height: 3.7333vw
     }
 
     .post-cate {
@@ -788,44 +602,6 @@
       margin-right: 2.2vw
     }
 
-    .post-title {
-      margin-top: 2.5333vw;
-      margin-bottom: 0;
-      font-size: 4.8vw;
-      line-height: 6.6667vw;
-      width: 74.4vw
-    }
-
-    .post-title:after {
-      width: 9.3333vw;
-      height: .8vw;
-      margin-top: 2.2667vw
-    }
-
-    .post-excerpt {
-      margin-top: 3.3333vw;
-      margin-bottom: 3.3333vw;
-      font-size: 4vw;
-      line-height: 5.6vw
-    }
-
-    .read-more {
-      font-size: 2.4533vw;
-      line-height: 2.4533vw;
-      min-width: 26.4933vw;
-      min-height: 6.1333vw;
-      padding-left: 3.7333vw;
-      padding-right: 3.7333vw;
-      padding-top: 2vw;
-      padding-bottom: 2vw;
-      border: .1333vw #dbb302 solid
-    }
-
-    .icon-ml-readmore {
-      margin-left: 1.3333vw;
-      font-size: 3.3333vw
-    }
-
     .post-meta {
       font-size: 2.1333vw;
       margin-left: 3.2vw
@@ -838,25 +614,6 @@
 
     .post-meta .icon-like-sp {
       font-size: 2.4vw
-    }
-
-    .list-box {
-      margin-bottom: 5.3333vw
-    }
-
-    .nav-links .page-numbers {
-      min-width: 8vw;
-      height: 8vw;
-      border: .1333vw #dbb302 solid;
-      font-size: 4vw;
-      line-height: 4vw;
-      margin-left: 1.7733vw;
-      margin-right: 1.7733vw;
-      margin-bottom: 1.7733vw
-    }
-
-    .list-box:last-child {
-      margin-bottom: 5.3333vw
     }
 
     .meta-category {
@@ -933,10 +690,6 @@
     list-style: none
   }
 
-  .widget_categories .screen-reader-text {
-    display: none
-  }
-
   .widget ul li {
     font-size: .9524vw;
     line-height: 1.5476vw;
@@ -969,10 +722,6 @@
     -moz-osx-font-smoothing: grayscale;
     position: absolute;
     left: 0
-  }
-
-  .widget .screen-reader-text {
-    display: none
   }
 
   .widget_search form {
@@ -1060,6 +809,7 @@
     margin-top: .5952vw
   }
 
+  .widget_profile ol,
   .widget_profile ul {
     padding-left: .9524vw;
     margin-top: .5952vw;
@@ -1086,11 +836,6 @@
   .widget ul li span,
   .widget ul li a {
     color: black
-  }
-
-  .widget ul li span.post-date {
-    color: #888;
-    font-style: italic
   }
 
   li.recentcomments {
@@ -1128,6 +873,7 @@
       list-style: unset
     }
 
+    .widget_profile ol,
     .widget_profile ul {
       padding-left: 2.1333vw;
       margin-top: 1.3333vw;
@@ -1393,6 +1139,462 @@
     }
   }
 
+  .content {
+    word-break: break-word
+  }
+
+  h2.article-title {
+    margin-top: 1.3095vw;
+    font-size: 1.9048vw;
+    line-height: 2.8571vw;
+    margin-bottom: 1.9048vw
+  }
+
+  h2.article-title a {
+    color: black;
+    text-decoration: none
+  }
+
+  .article-info .post-meta-box {
+    margin-top: 0
+  }
+
+  .article-info .post-meta:first-child {
+    margin-left: 0
+  }
+
+  .article-info .post-meta-box {
+    margin-bottom: .9524vw
+  }
+
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4 {
+    margin-top: 1.7857vw;
+    margin-bottom: 1.7857vw
+  }
+
+  .content h1 {
+    font-size: 1.6667vw
+  }
+
+  .content h2 {
+    font-size: 1.5476vw
+  }
+
+  .content h3 {
+    font-size: 1.4286vw
+  }
+
+  .content h4 {
+    font-size: 1.3095vw
+  }
+
+  .content p {
+    margin-top: 2.0238vw;
+    margin-bottom: 2.0238vw;
+    font-size: 1.0714vw;
+    line-height: 1.9048vw;
+    color: #666
+  }
+
+  .content ul,
+  .content ol {
+    padding-left: 1.4881vw;
+    font-size: 1.0714vw;
+    line-height: 1.9048vw;
+    margin-top: 2.0238vw;
+    margin-bottom: 2.0238vw
+  }
+
+  .content a {
+    color: #dbb302;
+    text-decoration: none
+  }
+
+  .likes-form {
+    text-align: center;
+    margin-bottom: 3.5714vw
+  }
+
+  .likes-button {
+    width: 4.7619vw;
+    height: 4.7619vw;
+    border-radius: 100%;
+    border: .0595vw solid #c4c4c4;
+    background: white;
+    color: #1a1a1a;
+    font-size: .8333vw;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+
+  .likes-button:hover {
+    color: #dbb302
+  }
+
+  .likes-button:before {
+    content: "";
+    font-family: "iconfont";
+    font-size: 1.9048vw;
+    margin-bottom: .3571vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+  }
+
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.5238vw
+  }
+
+  .post-nav .nav-previous a,
+  .post-nav .nav-next a {
+    color: #c5c5c5;
+    font-size: 1.0714vw;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex
+  }
+
+  .post-nav a.post-nav-link-active {
+    color: black
+  }
+
+  .post-nav a.post-nav-link-active:hover {
+    color: #dbb302
+  }
+
+  .post-nav .nav-previous a:before {
+    content: "";
+    font-family: "iconfont";
+    font-size: 1.5476vw;
+    margin-right: .875vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+  }
+
+  .post-nav .nav-next a:after {
+    content: "";
+    font-family: "iconfont";
+    font-size: 1.5476vw;
+    margin-left: .875vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+  }
+
+  .social-share {
+    display: flex;
+    max-width: 100%
+  }
+
+  .social-share-box {
+    width: 2.9762vw;
+    height: 2.9762vw;
+    margin-right: 1.7857vw
+  }
+
+  amp-social-share.rounded {
+    display: flex;
+    border-radius: 50%;
+    background-size: 60%;
+    color: #fff;
+    background-color: black
+  }
+
+  amp-social-share.rounded:hover {
+    background-color: #dbb302
+  }
+
+  .post-tags {
+    display: flex;
+    margin-top: 1.9644vw
+  }
+
+  .post-tags a {
+    display: inline-flex;
+    background: #f2f2f2;
+    padding-left: 1.3393vw;
+    padding-right: 1.3393vw;
+    padding-top: .6548vw;
+    padding-bottom: .6548vw;
+    margin-right: .3571vw;
+    color: #666;
+    font-size: .8333vw;
+    line-height: .8333vw;
+    text-decoration: none;
+    text-transform: uppercase
+  }
+
+  #comments {
+    margin-top: 4.7619vw
+  }
+
+  .comments>h2 {
+    text-align: center;
+    margin-bottom: 3.5714vw;
+    font-size: 1.0714vw;
+    line-height: 1.0714vw;
+    text-transform: uppercase
+  }
+
+  .comments>ul {
+    list-style: none;
+    padding-left: .9524vw;
+    margin-top: 0;
+    margin-bottom: 1.7857vw
+  }
+
+  .comment-respond .comment-reply-title {
+    font-size: 1.0714vw;
+    text-transform: uppercase
+  }
+
+  .comment-respond .comment-reply-title>small {
+    text-transform: uppercase;
+    float: right
+  }
+
+  .comment-form {
+    font-size: 0
+  }
+
+  .comment-form>.form-submit {
+    margin-bottom: 4.7619vw
+  }
+
+  .comment-form .comment-error {
+    color: red;
+    font-size: 1.0714vw;
+    margin-bottom: .2976vw
+  }
+
+  .comment-form-comment .comment-content {
+    width: 48.2143vw;
+    height: 11.9048vw;
+    resize: none;
+    border: .0595vw #e6e6e6 solid;
+    padding: 1.1905vw 1.3095vw 1.1905vw 1.3095vw;
+    font-size: 1.0952vw;
+    line-height: 1.0952vw;
+    box-sizing: border-box
+  }
+
+  .comment-form-comment .comment-content::placeholder {
+    font-size: 1.0952vw;
+    line-height: 1.0952vw
+  }
+
+  .comment-form>.form-submit>.submit {
+    border: .0595vw solid #dbb302;
+    text-transform: uppercase;
+    color: #dbb302;
+    font-size: 1.0952vw;
+    line-height: 1.0952vw;
+    background: white;
+    box-sizing: border-box;
+    padding: .9644vw 1.5059vw .9644vw 1.5059vw;
+    cursor: pointer
+  }
+
+  .comment-form>.form-submit>.submit:hover {
+    background: #dbb302;
+    color: white
+  }
+
+  .comment-form-author {
+    margin-right: 1.3095vw
+  }
+
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url {
+    display: inline-flex
+  }
+
+  .comment-form-author input,
+  .comment-form-email input,
+  .comment-form-url input {
+    width: 23.4524vw;
+    height: 3.4524vw;
+    border: .0595vw solid #e6e6e6;
+    padding: 1.369vw;
+    font-size: .9524vw;
+    line-height: .9524vw;
+    color: #333;
+    box-sizing: border-box
+  }
+
+  .comment-form-url input {
+    width: 48.2143vw
+  }
+
+  @media only screen and (max-width: 640px) {
+    .likes-form {
+      margin-bottom: 8vw
+    }
+
+    h2.article-title {
+      margin-top: 5.3333vw;
+      font-size: 5.0667vw;
+      line-height: 6.9334vw;
+      margin-bottom: 5.3333vw
+    }
+
+    .article-info .post-meta-box {
+      margin-bottom: 0
+    }
+
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4 {
+      margin-top: 5.3333vw;
+      margin-bottom: 5.3333vw
+    }
+
+    .content h1 {
+      font-size: 5.6vw
+    }
+
+    .content h2 {
+      font-size: 5.3333vw
+    }
+
+    .content h3 {
+      font-size: 5.0667vw
+    }
+
+    .content h4 {
+      font-size: 4.8vw
+    }
+
+    .content p {
+      margin-top: 4.5333vw;
+      margin-bottom: 4.5333vw;
+      font-size: 4vw;
+      line-height: 5.8667vw
+    }
+
+    .content ul,
+    .content ol {
+      padding-left: 3.3333vw;
+      font-size: 4vw;
+      line-height: 5.8667vw;
+      margin-top: 5.3333vw;
+      margin-bottom: 5.3333vw
+    }
+
+    .likes-button {
+      width: 16vw;
+      height: 16vw;
+      border: .1333vw solid #c4c4c4;
+      font-size: 2.6667vw;
+      margin-top: 2.6667vw
+    }
+
+    .likes-button:before {
+      font-size: 5.6vw;
+      margin-bottom: 1.8667vw
+    }
+
+    .post-nav {
+      margin-bottom: 12.6667vw
+    }
+
+    .post-nav .nav-previous a,
+    .post-nav .nav-next a {
+      font-size: 3.7333vw
+    }
+
+    .social-share-box {
+      width: 6.6667vw;
+      height: 6.6667vw;
+      margin-right: 4vw
+    }
+
+    .post-tags {
+      margin-top: 8.8vw
+    }
+
+    .post-tags a {
+      padding-left: 3.5333vw;
+      padding-right: 3.5333vw;
+      padding-top: 1.7333vw;
+      padding-bottom: 1.7333vw;
+      margin-right: 1.3333vw;
+      font-size: 2.2vw;
+      line-height: 2.2vw
+    }
+
+    #comments>ul {
+      padding-left: 0
+    }
+
+    .comments>h2,
+    .comment-respond .comment-reply-title {
+      font-size: 3.7333vw
+    }
+
+    .comment-form-comment .comment-content {
+      width: 92vw;
+      height: 26.6667vw;
+      border: .1333vw #e6e6e6 solid;
+      padding: 4vw 3.3333vw 4vw 3.3333vw;
+      font-size: 3.4667vw;
+      line-height: 3.4667vw
+    }
+
+    .comment-form-comment .comment-content::placeholder {
+      font-size: 3.4667vw;
+      line-height: 3.4667vw
+    }
+
+    .comment-form>.form-submit>.submit {
+      border: .1333vw solid #dbb302;
+      font-size: 3.2vw;
+      line-height: 3.2vw;
+      padding: 2.8133vw 4.4vw 2.8133vw 4.4vw;
+      cursor: pointer
+    }
+
+    .comment-form .comment-error {
+      font-size: 3.4667vw
+    }
+
+    .comment-form-author input,
+    .comment-form-email input,
+    .comment-form-url input {
+      width: 92vw;
+      height: 10.6667vw;
+      border: .1333vw solid #e6e6e6;
+      padding: 2.5333vw;
+      font-size: 3.4667vw;
+      line-height: 3.4667vw
+    }
+
+    .post-nav .nav-previous a:before {
+      font-size: 5.3333vw;
+      margin-right: 2.8vw
+    }
+
+    .post-nav .nav-next a:after {
+      font-size: 5.3333vw;
+      margin-left: 2.8vw
+    }
+
+    #comments {
+      margin-top: 12vw
+    }
+  }
+
+  :root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-224b51a {
+    display: none
+  }
+
   :root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-681d4ff {
     text-align: center;
     margin-top: .5vw
@@ -1466,88 +1668,77 @@
   </style>
 </noscript>
 <link rel="canonical" href="https://jiansing.github.io" />
-<link rel="shortcut icon" href="https://jiansing.github.io/favicon.ico?v=1584084478845">
+<link rel="shortcut icon" href="https://jiansing.github.io/favicon.ico?v=1584102665085">
 <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
 <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
-  </head>
-  <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://jiansing.github.io">
-  <img class="avatar" src="https://jiansing.github.io/images/avatar.png?v=1584084478845" alt="">
-  </a>
-  <h1 class="site-title">
-    Gridea
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+</head>
 
-      
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              Hello Gridea
-            </h2>
-            <div class="post-info">
-              <time class="post-time">
-                · 2018-12-12 ·
-              </time>
-              
-                <a href="https://jiansing.github.io/tag/qR-CzOzA6/" class="post-tags">
-                  # Gridea
-                </a>
-              
-            </div>
-            
-              <div class="post-feature-image" style="background-image: url('https://hhacker.com/wp-content/uploads/2020/02/022020_1310_2.jpg')">
-              </div>
-            
-            <div class="post-content">
-              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+<body>
+  <input type="checkbox" id="header-menu-button">
+  <header id="commonTop">
+  <div class="top-container">
+    <div class="title-menus-area">
+      <a class="blog-title" href="https://jiansing.github.io">Gridea</a>
+      <label for="header-menu-button" class="top-menus">
+        <nav class="menu-menu-1-container">
+          <ul id="menu-menu-1" class="menu">
+          
+          
+          <li>
+            <a href="/" aria-current="page">首页</a></li>
+          
+          
+          
+          <li>
+            <a href="/archives" aria-current="page">归档</a></li>
+          
+          
+          
+          <li>
+            <a href="/tags" aria-current="page">标签</a></li>
+          
+          
+          
+          <li>
+            <a href="/post/about" aria-current="page">关于</a></li>
+          
+          
+        </ul>
+        </nav>
+      </label>
+    </div>
+
+</header>
+  <main>
+    <div class="main-container">
+
+      <div class="article-info">
+        <div class="flex-box meta-category">
+          
+          <a class="post-cate" href="https://jiansing.github.io/tag/qR-CzOzA6/">Gridea</a>
+          
+        </div>
+        <h2 class="article-title">
+          <a href="https://jiansing.github.io/post/hello-gridea/">Hello Gridea</a>
+        </h2>
+        <div class="flex-box">
+          <div class="flex-box post-meta-box">
+            <a class="post-meta" href="https://jiansing.github.io"><span
+                class="iconfont icon-mr-postmeta"></span>Gridea</a>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>2018-12-12</span>
+            <!-- <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>0</span>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>59</span>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta icon-like-sp"></span><span
+                data-amp-bind-text="likes">1</span></span> -->
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 <!-- more -->
 <p><a href="https://github.com/getgridea/gridea">Github</a><br>
@@ -1572,23 +1763,110 @@
 <p>尽情发挥你的才华吧！</p>
 <p>😘 Enjoy~</p>
 
-            </div>
-          </article>
+      </div>
+      <!-- <form class="likes-form" method="post" action-xhr="//hhacker.com/wp-admin/admin-ajax.php" target="_top"
+        on="submit-success: AMP.setState({'likes': event.response.likes,'likesClass': event.response.class})">
+        <input type="hidden" name="post_id" value="1494"><input type="hidden" name="action" value="likes"><button
+          type="submit" data-amp-bind-class="likesClass" class="likes-button " data-amp-bind-text="likes">
+          1 </button>
+      </form> -->
+      
+
+      <div class="social-share">
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="email" layout="responsive" width="20" height="20"></amp-social-share>
         </div>
-    
-        
-
-        
-    
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="linkedin" layout="responsive" width="20" height="20">
+          </amp-social-share>
+        </div>
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="pinterest" layout="responsive"
+            data-param-media="https://amp.dev/static/samples/img/amp.jpg" width="20" height="20"></amp-social-share>
+        </div>
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="tumblr" layout="responsive" width="20" height="20"></amp-social-share>
+        </div>
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="twitter" layout="responsive" width="20" height="20">
+          </amp-social-share>
+        </div>
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="whatsapp" layout="responsive" width="20" height="20">
+          </amp-social-share>
+        </div>
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="line" layout="responsive" width="20" height="20"></amp-social-share>
+        </div>
       </div>
     </div>
-  </body>
+      <div class="sidebar">
+        <aside id="profile-2" class="widget widget_profile">
+          <div class="profile-box">
+            <div class="profile-avatar">
+              <amp-img src="https://jiansing.github.io/images/avatar.png?v=1584102665085" alt="avatar"
+                layout="fill"></amp-img>
+            </div>
+            <div class="profile-content">
+              <div class="amp-wp-681d4ff">
+                温故而知新
+              </div>
+    
+            </div>
+          </div>
+        </aside>
+        <aside id="search-10" class="widget widget_search">
+          <form target="_top" role="search" method="get" class="search-form" action="//hhacker.com/">
+            <input required type="text" class="search-field" placeholder="搜索…" value="" name="s"><button type="submit"
+              class="search-submit"></button>
+          </form>
+        </aside>
+        <aside id="categories-2" class="widget widget_categories">
+          <h4 class="widget-title">标签</h4>
+          <ul>
+            
+            <li class="cat-item"><a href="https://jiansing.github.io/tag/qR-CzOzA6/">
+              Gridea
+              
+          </a>
+            </li>
+            
+    
+          </ul>
+        </aside>
+        <!-- <aside id="linkcat-2" class="widget widget_links">
+          <h4 class="widget-title">链接表</h4>
+          <ul class="xoxo blogroll">
+            <li><a href="https://www.waihuituan.com" target="_blank">外汇团</a></li>
+    
+          </ul>
+        </aside> -->
+      </div>
+      <div class="scrolltop-wrap">
+        <span tabindex="0" role="button" class="go-top" on="tap:commonTop.scrollTo(duration=500, position=top)">
+            <span class="iconfont"></span>
+        </span>
+    </div>   
+  </main>
+  <footer>
+  <div class="footer-container">
+    <div class="footer-menus">
+    </div>
+    <div class="footer-copyright">
+      <p>
+        Copyright ©2020
+        <a href="https://jiansing.github.io"></a>
+        . All Rights Reserved.
+      </p>
+      <p>
+        <a href="https://jiansing.github.io">基于Gridea</a>
+        •
+        <a href="https://jiansing.github.io">Theme Inline AMP</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+
 </html>
