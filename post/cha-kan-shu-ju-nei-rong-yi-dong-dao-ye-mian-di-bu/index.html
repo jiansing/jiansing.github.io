@@ -9,7 +9,7 @@
 <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
 <link rel="preconnect dns-prefetch" href="https://fonts.googleapis.com/" crossorigin>
 <script async src="https://cdn.ampproject.org/v0.js"></script>
-<title>Gridea</title>
+<title>查看数据内容，移动到页面底部 | Gridea</title>
 <meta name="renderer" content="webkit" />
 <style amp-custom>
   body {
@@ -44,6 +44,7 @@
     -moz-osx-font-smoothing: grayscale
   }
 
+  textarea,
   input[type="password"],
   input[type="text"],
   input[type="url"],
@@ -51,6 +52,19 @@
   input[type="submit"] {
     -webkit-appearance: none;
     border-radius: 0
+  }
+
+  .content p[class^="amp-wp"] {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 1vw;
+    line-height: 1
+  }
+
+  @media only screen and (max-width: 640px) {
+    .content p[class^="amp-wp"] {
+      padding: 3vw
+    }
   }
 
   header {
@@ -507,45 +521,6 @@
     width: 48.2143vw
   }
 
-  .list-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2.9762vw
-  }
-
-  .title-img {
-    width: 48.2143vw;
-    height: 17.8571vw;
-    position: relative
-  }
-
-  .title-img amp-img.contain img {
-    object-fit: cover;
-    object-position: top;
-    transition: all .5s
-  }
-
-  a.title-img:hover amp-img.contain img {
-    object-fit: cover;
-    transform: scale(1.08);
-    -webkit-transform: scale(1.08);
-    -moz-transform: scale(1.08)
-  }
-
-  .post-info {
-    position: relative;
-    padding-left: 1.7857vw;
-    padding-top: 1.5119vw;
-    padding-right: 1.7857vw;
-    padding-bottom: 1.7857vw;
-    width: 48.2143vw;
-    border: .0595vw solid #e6e6e6;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column
-  }
-
   .post-cate {
     font-size: .9524vw;
     line-height: 1.5476vw;
@@ -570,42 +545,6 @@
     display: none
   }
 
-  .post-title {
-    font-size: 1.3613vw;
-    line-height: 2.381vw;
-    margin-top: .5952vw;
-    margin-bottom: 0;
-    width: 39.881vw;
-    word-break: break-all
-  }
-
-  .post-title:after {
-    display: flex;
-    content: "";
-    width: 4.1667vw;
-    height: .2976vw;
-    background: #dbb302;
-    margin-top: .7321vw
-  }
-
-  .post-title a {
-    text-decoration: none;
-    color: #000
-  }
-
-  .post-excerpt {
-    margin-top: 1.4286vw;
-    margin-bottom: 1.1905vw;
-    font-size: .9524vw;
-    line-height: 1.6667vw;
-    color: #8a8a8a;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-    visibility: visible
-  }
-
   .flex-box {
     display: flex;
     align-items: center
@@ -614,40 +553,6 @@
   .meta-category {
     flex-wrap: wrap;
     padding-right: 4.1667vw
-  }
-
-  .justify-between {
-    justify-content: space-between
-  }
-
-  .read-more {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: .8333vw;
-    line-height: .8333vw;
-    text-decoration: none;
-    min-width: 9.1667vw;
-    min-height: 2.1429vw;
-    box-sizing: border-box;
-    padding-left: 1.1905vw;
-    padding-right: 1.1905vw;
-    padding-top: .7143vw;
-    padding-bottom: .7143vw;
-    color: #dbb302;
-    border: .0595vw #dbb302 solid;
-    transition: all .2s;
-    text-transform: uppercase
-  }
-
-  .read-more:hover {
-    background: #dbb302;
-    color: white
-  }
-
-  .icon-ml-readmore {
-    margin-left: .625vw;
-    font-size: 1.1905vw
   }
 
   .post-meta-box {
@@ -673,71 +578,6 @@
     font-size: 1.1905vw
   }
 
-  .post-publish-date {
-    width: 4.1667vw;
-    height: 4.7619vw;
-    background: #f6f6f7;
-    position: absolute;
-    right: 1.2501vw;
-    top: -.8333vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center
-  }
-
-  .post-publish-date .post-date {
-    color: #dbb302;
-    font-size: 1.3095vw;
-    line-height: 2.2916vw;
-    font-weight: bold
-  }
-
-  .post-publish-date .post-month {
-    color: #000;
-    font-size: .8333vw;
-    line-height: 1.4583vw;
-    text-transform: uppercase
-  }
-
-  .list-box:last-child {
-    margin-bottom: 2.381vw
-  }
-
-  .pagination .screen-reader-text {
-    display: none
-  }
-
-  .nav-links {
-    margin-top: 2.9762vw;
-    margin-bottom: 2.9762vw;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap
-  }
-
-  .nav-links .page-numbers {
-    min-width: 2.1429vw;
-    height: 2.1429vw;
-    border: .0595vw #dbb302 solid;
-    color: #dbb302;
-    font-size: 1.0714vw;
-    line-height: 1.0714vw;
-    text-decoration: none;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: .4762vw;
-    margin-right: .4762vw;
-    margin-bottom: .4762vw;
-    box-sizing: border-box
-  }
-
-  .nav-links .current,
-  .nav-links a.page-numbers:hover {
-    background: #dbb302;
-    color: white
-  }
-
   @media only screen and (max-width: 640px) {
     main {
       width: 100%;
@@ -748,34 +588,6 @@
 
     .main-container {
       width: 92vw
-    }
-
-    .title-img {
-      width: 92vw;
-      height: 34.1333vw
-    }
-
-    .post-info {
-      width: 92vw;
-      padding: 3.4667vw;
-      border: .2667vw solid #e6e6e6
-    }
-
-    .post-publish-date {
-      width: 10.6667vw;
-      height: 12.1333vw;
-      top: -2vw;
-      right: 2.8vw
-    }
-
-    .post-publish-date .post-date {
-      font-size: 3.4667vw;
-      line-height: 6.0667vw
-    }
-
-    .post-publish-date .post-month {
-      font-size: 2.1333vw;
-      line-height: 3.7333vw
     }
 
     .post-cate {
@@ -790,44 +602,6 @@
       margin-right: 2.2vw
     }
 
-    .post-title {
-      margin-top: 2.5333vw;
-      margin-bottom: 0;
-      font-size: 4.8vw;
-      line-height: 6.6667vw;
-      width: 74.4vw
-    }
-
-    .post-title:after {
-      width: 9.3333vw;
-      height: .8vw;
-      margin-top: 2.2667vw
-    }
-
-    .post-excerpt {
-      margin-top: 3.3333vw;
-      margin-bottom: 3.3333vw;
-      font-size: 4vw;
-      line-height: 5.6vw
-    }
-
-    .read-more {
-      font-size: 2.4533vw;
-      line-height: 2.4533vw;
-      min-width: 26.4933vw;
-      min-height: 6.1333vw;
-      padding-left: 3.7333vw;
-      padding-right: 3.7333vw;
-      padding-top: 2vw;
-      padding-bottom: 2vw;
-      border: .1333vw #dbb302 solid
-    }
-
-    .icon-ml-readmore {
-      margin-left: 1.3333vw;
-      font-size: 3.3333vw
-    }
-
     .post-meta {
       font-size: 2.1333vw;
       margin-left: 3.2vw
@@ -840,25 +614,6 @@
 
     .post-meta .icon-like-sp {
       font-size: 2.4vw
-    }
-
-    .list-box {
-      margin-bottom: 5.3333vw
-    }
-
-    .nav-links .page-numbers {
-      min-width: 8vw;
-      height: 8vw;
-      border: .1333vw #dbb302 solid;
-      font-size: 4vw;
-      line-height: 4vw;
-      margin-left: 1.7733vw;
-      margin-right: 1.7733vw;
-      margin-bottom: 1.7733vw
-    }
-
-    .list-box:last-child {
-      margin-bottom: 5.3333vw
     }
 
     .meta-category {
@@ -935,10 +690,6 @@
     list-style: none
   }
 
-  .widget_categories .screen-reader-text {
-    display: none
-  }
-
   .widget ul li {
     font-size: .9524vw;
     line-height: 1.5476vw;
@@ -971,10 +722,6 @@
     -moz-osx-font-smoothing: grayscale;
     position: absolute;
     left: 0
-  }
-
-  .widget .screen-reader-text {
-    display: none
   }
 
   .widget_search form {
@@ -1062,6 +809,7 @@
     margin-top: .5952vw
   }
 
+  .widget_profile ol,
   .widget_profile ul {
     padding-left: .9524vw;
     margin-top: .5952vw;
@@ -1088,11 +836,6 @@
   .widget ul li span,
   .widget ul li a {
     color: black
-  }
-
-  .widget ul li span.post-date {
-    color: #888;
-    font-style: italic
   }
 
   li.recentcomments {
@@ -1130,6 +873,7 @@
       list-style: unset
     }
 
+    .widget_profile ol,
     .widget_profile ul {
       padding-left: 2.1333vw;
       margin-top: 1.3333vw;
@@ -1395,6 +1139,462 @@
     }
   }
 
+  .content {
+    word-break: break-word
+  }
+
+  h2.article-title {
+    margin-top: 1.3095vw;
+    font-size: 1.9048vw;
+    line-height: 2.8571vw;
+    margin-bottom: 1.9048vw
+  }
+
+  h2.article-title a {
+    color: black;
+    text-decoration: none
+  }
+
+  .article-info .post-meta-box {
+    margin-top: 0
+  }
+
+  .article-info .post-meta:first-child {
+    margin-left: 0
+  }
+
+  .article-info .post-meta-box {
+    margin-bottom: .9524vw
+  }
+
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4 {
+    margin-top: 1.7857vw;
+    margin-bottom: 1.7857vw
+  }
+
+  .content h1 {
+    font-size: 1.6667vw
+  }
+
+  .content h2 {
+    font-size: 1.5476vw
+  }
+
+  .content h3 {
+    font-size: 1.4286vw
+  }
+
+  .content h4 {
+    font-size: 1.3095vw
+  }
+
+  .content p {
+    margin-top: 2.0238vw;
+    margin-bottom: 2.0238vw;
+    font-size: 1.0714vw;
+    line-height: 1.9048vw;
+    color: #666
+  }
+
+  .content ul,
+  .content ol {
+    padding-left: 1.4881vw;
+    font-size: 1.0714vw;
+    line-height: 1.9048vw;
+    margin-top: 2.0238vw;
+    margin-bottom: 2.0238vw
+  }
+
+  .content a {
+    color: #dbb302;
+    text-decoration: none
+  }
+
+  .likes-form {
+    text-align: center;
+    margin-bottom: 3.5714vw
+  }
+
+  .likes-button {
+    width: 4.7619vw;
+    height: 4.7619vw;
+    border-radius: 100%;
+    border: .0595vw solid #c4c4c4;
+    background: white;
+    color: #1a1a1a;
+    font-size: .8333vw;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+
+  .likes-button:hover {
+    color: #dbb302
+  }
+
+  .likes-button:before {
+    content: "";
+    font-family: "iconfont";
+    font-size: 1.9048vw;
+    margin-bottom: .3571vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+  }
+
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.5238vw
+  }
+
+  .post-nav .nav-previous a,
+  .post-nav .nav-next a {
+    color: #c5c5c5;
+    font-size: 1.0714vw;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex
+  }
+
+  .post-nav a.post-nav-link-active {
+    color: black
+  }
+
+  .post-nav a.post-nav-link-active:hover {
+    color: #dbb302
+  }
+
+  .post-nav .nav-previous a:before {
+    content: "";
+    font-family: "iconfont";
+    font-size: 1.5476vw;
+    margin-right: .875vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+  }
+
+  .post-nav .nav-next a:after {
+    content: "";
+    font-family: "iconfont";
+    font-size: 1.5476vw;
+    margin-left: .875vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+  }
+
+  .social-share {
+    display: flex;
+    max-width: 100%
+  }
+
+  .social-share-box {
+    width: 2.9762vw;
+    height: 2.9762vw;
+    margin-right: 1.7857vw
+  }
+
+  amp-social-share.rounded {
+    display: flex;
+    border-radius: 50%;
+    background-size: 60%;
+    color: #fff;
+    background-color: black
+  }
+
+  amp-social-share.rounded:hover {
+    background-color: #dbb302
+  }
+
+  .post-tags {
+    display: flex;
+    margin-top: 1.9644vw
+  }
+
+  .post-tags a {
+    display: inline-flex;
+    background: #f2f2f2;
+    padding-left: 1.3393vw;
+    padding-right: 1.3393vw;
+    padding-top: .6548vw;
+    padding-bottom: .6548vw;
+    margin-right: .3571vw;
+    color: #666;
+    font-size: .8333vw;
+    line-height: .8333vw;
+    text-decoration: none;
+    text-transform: uppercase
+  }
+
+  #comments {
+    margin-top: 4.7619vw
+  }
+
+  .comments>h2 {
+    text-align: center;
+    margin-bottom: 3.5714vw;
+    font-size: 1.0714vw;
+    line-height: 1.0714vw;
+    text-transform: uppercase
+  }
+
+  .comments>ul {
+    list-style: none;
+    padding-left: .9524vw;
+    margin-top: 0;
+    margin-bottom: 1.7857vw
+  }
+
+  .comment-respond .comment-reply-title {
+    font-size: 1.0714vw;
+    text-transform: uppercase
+  }
+
+  .comment-respond .comment-reply-title>small {
+    text-transform: uppercase;
+    float: right
+  }
+
+  .comment-form {
+    font-size: 0
+  }
+
+  .comment-form>.form-submit {
+    margin-bottom: 4.7619vw
+  }
+
+  .comment-form .comment-error {
+    color: red;
+    font-size: 1.0714vw;
+    margin-bottom: .2976vw
+  }
+
+  .comment-form-comment .comment-content {
+    width: 48.2143vw;
+    height: 11.9048vw;
+    resize: none;
+    border: .0595vw #e6e6e6 solid;
+    padding: 1.1905vw 1.3095vw 1.1905vw 1.3095vw;
+    font-size: 1.0952vw;
+    line-height: 1.0952vw;
+    box-sizing: border-box
+  }
+
+  .comment-form-comment .comment-content::placeholder {
+    font-size: 1.0952vw;
+    line-height: 1.0952vw
+  }
+
+  .comment-form>.form-submit>.submit {
+    border: .0595vw solid #dbb302;
+    text-transform: uppercase;
+    color: #dbb302;
+    font-size: 1.0952vw;
+    line-height: 1.0952vw;
+    background: white;
+    box-sizing: border-box;
+    padding: .9644vw 1.5059vw .9644vw 1.5059vw;
+    cursor: pointer
+  }
+
+  .comment-form>.form-submit>.submit:hover {
+    background: #dbb302;
+    color: white
+  }
+
+  .comment-form-author {
+    margin-right: 1.3095vw
+  }
+
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url {
+    display: inline-flex
+  }
+
+  .comment-form-author input,
+  .comment-form-email input,
+  .comment-form-url input {
+    width: 23.4524vw;
+    height: 3.4524vw;
+    border: .0595vw solid #e6e6e6;
+    padding: 1.369vw;
+    font-size: .9524vw;
+    line-height: .9524vw;
+    color: #333;
+    box-sizing: border-box
+  }
+
+  .comment-form-url input {
+    width: 48.2143vw
+  }
+
+  @media only screen and (max-width: 640px) {
+    .likes-form {
+      margin-bottom: 8vw
+    }
+
+    h2.article-title {
+      margin-top: 5.3333vw;
+      font-size: 5.0667vw;
+      line-height: 6.9334vw;
+      margin-bottom: 5.3333vw
+    }
+
+    .article-info .post-meta-box {
+      margin-bottom: 0
+    }
+
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4 {
+      margin-top: 5.3333vw;
+      margin-bottom: 5.3333vw
+    }
+
+    .content h1 {
+      font-size: 5.6vw
+    }
+
+    .content h2 {
+      font-size: 5.3333vw
+    }
+
+    .content h3 {
+      font-size: 5.0667vw
+    }
+
+    .content h4 {
+      font-size: 4.8vw
+    }
+
+    .content p {
+      margin-top: 4.5333vw;
+      margin-bottom: 4.5333vw;
+      font-size: 4vw;
+      line-height: 5.8667vw
+    }
+
+    .content ul,
+    .content ol {
+      padding-left: 3.3333vw;
+      font-size: 4vw;
+      line-height: 5.8667vw;
+      margin-top: 5.3333vw;
+      margin-bottom: 5.3333vw
+    }
+
+    .likes-button {
+      width: 16vw;
+      height: 16vw;
+      border: .1333vw solid #c4c4c4;
+      font-size: 2.6667vw;
+      margin-top: 2.6667vw
+    }
+
+    .likes-button:before {
+      font-size: 5.6vw;
+      margin-bottom: 1.8667vw
+    }
+
+    .post-nav {
+      margin-bottom: 12.6667vw
+    }
+
+    .post-nav .nav-previous a,
+    .post-nav .nav-next a {
+      font-size: 3.7333vw
+    }
+
+    .social-share-box {
+      width: 6.6667vw;
+      height: 6.6667vw;
+      margin-right: 4vw
+    }
+
+    .post-tags {
+      margin-top: 8.8vw
+    }
+
+    .post-tags a {
+      padding-left: 3.5333vw;
+      padding-right: 3.5333vw;
+      padding-top: 1.7333vw;
+      padding-bottom: 1.7333vw;
+      margin-right: 1.3333vw;
+      font-size: 2.2vw;
+      line-height: 2.2vw
+    }
+
+    #comments>ul {
+      padding-left: 0
+    }
+
+    .comments>h2,
+    .comment-respond .comment-reply-title {
+      font-size: 3.7333vw
+    }
+
+    .comment-form-comment .comment-content {
+      width: 92vw;
+      height: 26.6667vw;
+      border: .1333vw #e6e6e6 solid;
+      padding: 4vw 3.3333vw 4vw 3.3333vw;
+      font-size: 3.4667vw;
+      line-height: 3.4667vw
+    }
+
+    .comment-form-comment .comment-content::placeholder {
+      font-size: 3.4667vw;
+      line-height: 3.4667vw
+    }
+
+    .comment-form>.form-submit>.submit {
+      border: .1333vw solid #dbb302;
+      font-size: 3.2vw;
+      line-height: 3.2vw;
+      padding: 2.8133vw 4.4vw 2.8133vw 4.4vw;
+      cursor: pointer
+    }
+
+    .comment-form .comment-error {
+      font-size: 3.4667vw
+    }
+
+    .comment-form-author input,
+    .comment-form-email input,
+    .comment-form-url input {
+      width: 92vw;
+      height: 10.6667vw;
+      border: .1333vw solid #e6e6e6;
+      padding: 2.5333vw;
+      font-size: 3.4667vw;
+      line-height: 3.4667vw
+    }
+
+    .post-nav .nav-previous a:before {
+      font-size: 5.3333vw;
+      margin-right: 2.8vw
+    }
+
+    .post-nav .nav-next a:after {
+      font-size: 5.3333vw;
+      margin-left: 2.8vw
+    }
+
+    #comments {
+      margin-top: 12vw
+    }
+  }
+
+  :root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-224b51a {
+    display: none
+  }
+
   :root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-681d4ff {
     text-align: center;
     margin-top: .5vw
@@ -1472,10 +1672,12 @@
 <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
 <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
-  
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
 </head>
 
-<body class="home blog">
+<body>
   <input type="checkbox" id="header-menu-button">
   <header id="commonTop">
   <div class="top-container">
@@ -1511,215 +1713,147 @@
     </div>
 
 </header>
-
   <main>
     <div class="main-container">
-      <div class="post-list">
-        
-        <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-          
 
-          <div class="post-info">
-            
-            <h2 class="post-title">
-              <a href="https://jiansing.github.io/post/cha-kan-shu-ju-nei-rong-yi-dong-dao-ye-mian-di-bu/">查看数据内容，移动到页面底部</a>
-            </h2>
-            <div class="post-excerpt">
-              
-            </div>
-            <div class="flex-box justify-between">
-              <a href="https://jiansing.github.io/post/cha-kan-shu-ju-nei-rong-yi-dong-dao-ye-mian-di-bu/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-              <div class="flex-box post-meta-box">
-                <a class="post-meta" href="https://jiansing.github.io/post/cha-kan-shu-ju-nei-rong-yi-dong-dao-ye-mian-di-bu/#comments"><span
-                    class="iconfont icon-mr-postmeta"></span></a>
-                <a class="post-meta" href="https://jiansing.github.io/post/cha-kan-shu-ju-nei-rong-yi-dong-dao-ye-mian-di-bu/"><span class="iconfont icon-mr-postmeta"></span></a>
-                <a class="post-meta" href="https://jiansing.github.io/post/cha-kan-shu-ju-nei-rong-yi-dong-dao-ye-mian-di-bu/"><span
-                    class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-              </div>
-            </div>
-            
+      <div class="article-info">
+        <div class="flex-box meta-category">
+          
+        </div>
+        <h2 class="article-title">
+          <a href="https://jiansing.github.io/post/cha-kan-shu-ju-nei-rong-yi-dong-dao-ye-mian-di-bu/">查看数据内容，移动到页面底部</a>
+        </h2>
+        <div class="flex-box">
+          <div class="flex-box post-meta-box">
+            <a class="post-meta" href="https://jiansing.github.io"><span
+                class="iconfont icon-mr-postmeta"></span>Gridea</a>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>2020-03-13</span>
+            <!-- <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>0</span>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>59</span>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta icon-like-sp"></span><span
+                data-amp-bind-text="likes">1</span></span> -->
           </div>
-        </article>
-        
-        <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-          
-          <a href="https://jiansing.github.io/post/yun-wei/" class="title-img">
-          <amp-img class="contain" src="https://jiansing.github.io/post-images/yun-wei.jpg" layout="fill" alt="运维" ></amp-img></a>
-          
-
-          <div class="post-info">
-            
-            <h2 class="post-title">
-              <a href="https://jiansing.github.io/post/yun-wei/">运维</a>
-            </h2>
-            <div class="post-excerpt">
-              
-            </div>
-            <div class="flex-box justify-between">
-              <a href="https://jiansing.github.io/post/yun-wei/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-              <div class="flex-box post-meta-box">
-                <a class="post-meta" href="https://jiansing.github.io/post/yun-wei/#comments"><span
-                    class="iconfont icon-mr-postmeta"></span></a>
-                <a class="post-meta" href="https://jiansing.github.io/post/yun-wei/"><span class="iconfont icon-mr-postmeta"></span></a>
-                <a class="post-meta" href="https://jiansing.github.io/post/yun-wei/"><span
-                    class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-              </div>
-            </div>
-            
-          </div>
-        </article>
-        
-        <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-          
-          <a href="https://jiansing.github.io/post/hai-er-kong-diao-lian-bu-shang-wifi-zen-me-ban-wu-lian-wang-shi-dai-de-xian-zhuang-he/" class="title-img">
-          <amp-img class="contain" src="https://jiansing.github.io/post-images/hai-er-kong-diao-lian-bu-shang-wifi-zen-me-ban-wu-lian-wang-shi-dai-de-xian-zhuang-he.jpg" layout="fill" alt="海尔空调连不上wifi怎么办-物联网时代的现状和" ></amp-img></a>
-          
-
-          <div class="post-info">
-            
-            <h2 class="post-title">
-              <a href="https://jiansing.github.io/post/hai-er-kong-diao-lian-bu-shang-wifi-zen-me-ban-wu-lian-wang-shi-dai-de-xian-zhuang-he/">海尔空调连不上wifi怎么办-物联网时代的现状和</a>
-            </h2>
-            <div class="post-excerpt">
-              
-            </div>
-            <div class="flex-box justify-between">
-              <a href="https://jiansing.github.io/post/hai-er-kong-diao-lian-bu-shang-wifi-zen-me-ban-wu-lian-wang-shi-dai-de-xian-zhuang-he/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-              <div class="flex-box post-meta-box">
-                <a class="post-meta" href="https://jiansing.github.io/post/hai-er-kong-diao-lian-bu-shang-wifi-zen-me-ban-wu-lian-wang-shi-dai-de-xian-zhuang-he/#comments"><span
-                    class="iconfont icon-mr-postmeta"></span></a>
-                <a class="post-meta" href="https://jiansing.github.io/post/hai-er-kong-diao-lian-bu-shang-wifi-zen-me-ban-wu-lian-wang-shi-dai-de-xian-zhuang-he/"><span class="iconfont icon-mr-postmeta"></span></a>
-                <a class="post-meta" href="https://jiansing.github.io/post/hai-er-kong-diao-lian-bu-shang-wifi-zen-me-ban-wu-lian-wang-shi-dai-de-xian-zhuang-he/"><span
-                    class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-              </div>
-            </div>
-            
-          </div>
-        </article>
-        
-        <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-          
-          <a href="https://jiansing.github.io/post/jing-ti-yi-chong-xin-xing-liu-lan-qi-guang-gao-jie-chi/" class="title-img">
-          <amp-img class="contain" src="https://jiansing.github.io/post-images/jing-ti-yi-chong-xin-xing-liu-lan-qi-guang-gao-jie-chi.jpg" layout="fill" alt="警惕一种新型浏览器广告劫持" ></amp-img></a>
-          
-
-          <div class="post-info">
-            
-            <h2 class="post-title">
-              <a href="https://jiansing.github.io/post/jing-ti-yi-chong-xin-xing-liu-lan-qi-guang-gao-jie-chi/">警惕一种新型浏览器广告劫持</a>
-            </h2>
-            <div class="post-excerpt">
-              
-            </div>
-            <div class="flex-box justify-between">
-              <a href="https://jiansing.github.io/post/jing-ti-yi-chong-xin-xing-liu-lan-qi-guang-gao-jie-chi/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-              <div class="flex-box post-meta-box">
-                <a class="post-meta" href="https://jiansing.github.io/post/jing-ti-yi-chong-xin-xing-liu-lan-qi-guang-gao-jie-chi/#comments"><span
-                    class="iconfont icon-mr-postmeta"></span></a>
-                <a class="post-meta" href="https://jiansing.github.io/post/jing-ti-yi-chong-xin-xing-liu-lan-qi-guang-gao-jie-chi/"><span class="iconfont icon-mr-postmeta"></span></a>
-                <a class="post-meta" href="https://jiansing.github.io/post/jing-ti-yi-chong-xin-xing-liu-lan-qi-guang-gao-jie-chi/"><span
-                    class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-              </div>
-            </div>
-            
-          </div>
-        </article>
-        
-        <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-          
-
-          <div class="post-info">
-            
-            <h2 class="post-title">
-              <a href="https://jiansing.github.io/post/luo-pang-de-hua-tie-lu-qing-huai-zai-shang-ye-she-hui-de-shi-bai/">罗胖的滑铁卢：情怀在商业社会的失败</a>
-            </h2>
-            <div class="post-excerpt">
-              
-            </div>
-            <div class="flex-box justify-between">
-              <a href="https://jiansing.github.io/post/luo-pang-de-hua-tie-lu-qing-huai-zai-shang-ye-she-hui-de-shi-bai/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-              <div class="flex-box post-meta-box">
-                <a class="post-meta" href="https://jiansing.github.io/post/luo-pang-de-hua-tie-lu-qing-huai-zai-shang-ye-she-hui-de-shi-bai/#comments"><span
-                    class="iconfont icon-mr-postmeta"></span></a>
-                <a class="post-meta" href="https://jiansing.github.io/post/luo-pang-de-hua-tie-lu-qing-huai-zai-shang-ye-she-hui-de-shi-bai/"><span class="iconfont icon-mr-postmeta"></span></a>
-                <a class="post-meta" href="https://jiansing.github.io/post/luo-pang-de-hua-tie-lu-qing-huai-zai-shang-ye-she-hui-de-shi-bai/"><span
-                    class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-              </div>
-            </div>
-            
-          </div>
-        </article>
-        
-
+        </div>
       </div>
-    <div>             
-      <nav class="navigation pagination" role="navigation" aria-label="文章">
-        <h2 class="screen-reader-text">文章导航</h2>
-        <div class="nav-links">
-          
-          
-            <a class="page-numbers" href="https://jiansing.github.io/page/2">下一页</a>
-          
+      <div class="content">
+        <p>1.运行环境PHP 5 &gt;= 5.5.0</p>
+<p>2.导入数据库结构，直接导入magichecker.sql，为magichecker数据库添加一个访问的用户名和密码</p>
+<p>3.生成访问密码，打开页面：</p>
+<p><a href="http://hhacker.com/wp-content/uploads/2015/01/loginform.png"><amp-img class="alignnone size-full wp-image-862 amp-wp-enforced-sizes" src="http://hhacker.com/wp-content/uploads/2015/01/loginform.png" alt="loginform" width="480" height="464" layout="intrinsic"><noscript><img class="alignnone size-full wp-image-862" src="http://hhacker.com/wp-content/uploads/2015/01/loginform.png" alt="loginform" width="480" height="464"></noscript></amp-img></a></p>
+<p>输入管理密码明文并回车 得到管理密文：</p>
+<p><a href="http://hhacker.com/wp-content/uploads/2015/01/adminpwd1.png"><amp-img class="alignnone size-full wp-image-864 amp-wp-enforced-sizes" src="http://hhacker.com/wp-content/uploads/2015/01/adminpwd1.png" alt="adminpwd" width="387" height="163" layout="intrinsic"><noscript><img class="alignnone size-full wp-image-864" src="http://hhacker.com/wp-content/uploads/2015/01/adminpwd1.png" alt="adminpwd" width="387" height="163"></noscript></amp-img></a></p>
+<p>4.进入任意域名dns管理页面，新建子域名txt记录，内容为以上生成的管理密文</p>
+<p><a href="http://hhacker.com/wp-content/uploads/2015/01/dnsrecord.png"><amp-img class="alignnone size-full wp-image-865 amp-wp-enforced-sizes" src="http://hhacker.com/wp-content/uploads/2015/01/dnsrecord.png" alt="dnsrecord" width="787" height="151" layout="intrinsic"><noscript><img class="alignnone size-full wp-image-865" src="http://hhacker.com/wp-content/uploads/2015/01/dnsrecord.png" alt="dnsrecord" width="787" height="151"></noscript></amp-img></a></p>
+<p>5.开始配置magichecker.php文件（文件无需放到根目录 任意目录皆可）<br><code><br>
+/* 配置区域 */<br>
+$config['debug'] = false;<br>
+$config['username'] = "admin"; //用户名<br>
+$config['password'] = "pass.fx182.com"; //TXT密码解析域名<br>
+$config['domain'] = "test.com"; //对应域名<br>
+$config['sqlserver'] = "localhost"; //sql数据库地址<br>
+$config['sqluser'] = "root"; //sql用户名<br>
+$config['sqlpwd'] = "root"; //sql密码<br>
+$config['sqldb'] = "magichecker"; //数据库名称<br>
+$config['email'] = ""; //接收检测报告的email地址 留空表示不发送email<br>
+$config['ext'] = array(); //需要检测的文件扩展名 留空表示检测所有 array("php","html","js")<br>
+$config['skip'] = array(".svn"); //跳过检测的文件路径 包含该路径下的所有文件 示例:array(".svn","upload");</code></p>
+<p>6.使用用户名和密码登录,点击“开始完整性校验”</p>
+<p><a href="http://hhacker.com/wp-content/uploads/2015/01/letscheck.png"><amp-img class="alignnone wp-image-866 size-full amp-wp-enforced-sizes" src="http://hhacker.com/wp-content/uploads/2015/01/letscheck.png" alt="letscheck" width="1339" height="777" layout="intrinsic"><noscript><img class="alignnone wp-image-866 size-full" src="http://hhacker.com/wp-content/uploads/2015/01/letscheck.png" alt="letscheck" width="1339" height="777"></noscript></amp-img></a></p>
+<p>7.查看数据内容，移动到页面底部，点击“我确认以上更改并签署文件哈希值”并提交。</p>
+<p><a href="http://hhacker.com/wp-content/uploads/2015/01/confirmhash.png"><amp-img class="alignnone size-full wp-image-867 amp-wp-enforced-sizes" src="http://hhacker.com/wp-content/uploads/2015/01/confirmhash.png" alt="confirmhash" width="1205" height="301" layout="intrinsic"><noscript><img class="alignnone size-full wp-image-867" src="http://hhacker.com/wp-content/uploads/2015/01/confirmhash.png" alt="confirmhash" width="1205" height="301"></noscript></amp-img></a></p>
+<p>8.完成后页面底部会提示成功或失败，以下为成功截图：</p>
+<p><a href="http://hhacker.com/wp-content/uploads/2015/01/success.png"><amp-img class="alignnone size-full wp-image-868 amp-wp-enforced-sizes" src="http://hhacker.com/wp-content/uploads/2015/01/success.png" alt="success" width="497" height="98" layout="intrinsic"><noscript><img class="alignnone size-full wp-image-868" src="http://hhacker.com/wp-content/uploads/2015/01/success.png" alt="success" width="497" height="98"></noscript></amp-img></a></p>
+      </div>
+      <!-- <form class="likes-form" method="post" action-xhr="//hhacker.com/wp-admin/admin-ajax.php" target="_top"
+        on="submit-success: AMP.setState({'likes': event.response.likes,'likesClass': event.response.class})">
+        <input type="hidden" name="post_id" value="1494"><input type="hidden" name="action" value="likes"><button
+          type="submit" data-amp-bind-class="likesClass" class="likes-button " data-amp-bind-text="likes">
+          1 </button>
+      </form> -->
+      
+      <nav class="post-nav">
+        
+        
+        <div class="nav-next">
+          <a class="post-nav-link-active" title="运维"
+            href="https://jiansing.github.io/post/yun-wei/">下一篇文章</a>   
+        
+
           </div>
       </nav>
-    </div>
-  </div>
+      
 
-
-  <div class="sidebar">
-    <aside id="profile-2" class="widget widget_profile">
-      <div class="profile-box">
-        <div class="profile-avatar">
-          <amp-img src="https://jiansing.github.io/images/avatar.png?v=1584111822157" alt="avatar"
-            layout="fill"></amp-img>
+      <div class="social-share">
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="email" layout="responsive" width="20" height="20"></amp-social-share>
         </div>
-        <div class="profile-content">
-          <div class="amp-wp-681d4ff">
-            温故而知新
-          </div>
-
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="linkedin" layout="responsive" width="20" height="20">
+          </amp-social-share>
+        </div>
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="pinterest" layout="responsive"
+            data-param-media="https://amp.dev/static/samples/img/amp.jpg" width="20" height="20"></amp-social-share>
+        </div>
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="tumblr" layout="responsive" width="20" height="20"></amp-social-share>
+        </div>
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="twitter" layout="responsive" width="20" height="20">
+          </amp-social-share>
+        </div>
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="whatsapp" layout="responsive" width="20" height="20">
+          </amp-social-share>
+        </div>
+        <div class="social-share-box">
+          <amp-social-share class="rounded" type="line" layout="responsive" width="20" height="20"></amp-social-share>
         </div>
       </div>
-    </aside>
-    <aside id="search-10" class="widget widget_search">
-      <form target="_top" role="search" method="get" class="search-form" action="//hhacker.com/">
-        <input required type="text" class="search-field" placeholder="搜索…" value="" name="s"><button type="submit"
-          class="search-submit"></button>
-      </form>
-    </aside>
-    <aside id="categories-2" class="widget widget_categories">
-      <h4 class="widget-title">标签</h4>
-      <ul>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-      </ul>
-    </aside>
-    <!-- <aside id="linkcat-2" class="widget widget_links">
-      <h4 class="widget-title">链接表</h4>
-      <ul class="xoxo blogroll">
-        <li><a href="https://www.waihuituan.com" target="_blank">外汇团</a></li>
-
-      </ul>
-    </aside> -->
-  </div>
-  <div class="scrolltop-wrap">
-    <span tabindex="0" role="button" class="go-top" on="tap:commonTop.scrollTo(duration=500, position=top)">
-        <span class="iconfont"></span>
-    </span>
-</div>
-</main>
-
-<footer>
+    </div>
+      <div class="sidebar">
+        <aside id="profile-2" class="widget widget_profile">
+          <div class="profile-box">
+            <div class="profile-avatar">
+              <amp-img src="https://jiansing.github.io/images/avatar.png?v=1584111822157" alt="avatar"
+                layout="fill"></amp-img>
+            </div>
+            <div class="profile-content">
+              <div class="amp-wp-681d4ff">
+                温故而知新
+              </div>
+    
+            </div>
+          </div>
+        </aside>
+        <aside id="search-10" class="widget widget_search">
+          <form target="_top" role="search" method="get" class="search-form" action="//hhacker.com/">
+            <input required type="text" class="search-field" placeholder="搜索…" value="" name="s"><button type="submit"
+              class="search-submit"></button>
+          </form>
+        </aside>
+        <aside id="categories-2" class="widget widget_categories">
+          <h4 class="widget-title">标签</h4>
+          <ul>
+            
+    
+          </ul>
+        </aside>
+        <!-- <aside id="linkcat-2" class="widget widget_links">
+          <h4 class="widget-title">链接表</h4>
+          <ul class="xoxo blogroll">
+            <li><a href="https://www.waihuituan.com" target="_blank">外汇团</a></li>
+    
+          </ul>
+        </aside> -->
+      </div>
+      <div class="scrolltop-wrap">
+        <span tabindex="0" role="button" class="go-top" on="tap:commonTop.scrollTo(duration=500, position=top)">
+            <span class="iconfont"></span>
+        </span>
+    </div>   
+  </main>
+  <footer>
   <div class="footer-container">
     <div class="footer-menus">
     </div>
@@ -1737,7 +1871,6 @@
     </div>
   </div>
 </footer>
-
 
 </body>
 
