@@ -1,347 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jiansing.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-03-13T15:06:15.405Z</updated>
+    <title>Jiansing&apos;s blog</title>
+    <updated>2020-03-14T14:14:27.645Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jiansing.github.io"/>
     <link rel="self" href="https://jiansing.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>&lt;p&gt;念念不忘，必有回响&lt;/p&gt;
+</subtitle>
     <logo>https://jiansing.github.io/images/avatar.png</logo>
     <icon>https://jiansing.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, Jiansing&apos;s blog</rights>
     <entry>
-        <title type="html"><![CDATA[查看数据内容，移动到页面底部]]></title>
-        <id>https://jiansing.github.io/post/cha-kan-shu-ju-nei-rong-yi-dong-dao-ye-mian-di-bu/</id>
-        <link href="https://jiansing.github.io/post/cha-kan-shu-ju-nei-rong-yi-dong-dao-ye-mian-di-bu/">
+        <title type="html"><![CDATA[Gridea Theme InlineAMP (v1.0.0)]]></title>
+        <id>https://jiansing.github.io/VDTWOfQoh/</id>
+        <link href="https://jiansing.github.io/VDTWOfQoh/">
         </link>
-        <updated>2020-03-13T14:30:59.000Z</updated>
-        <content type="html"><![CDATA[<p>1.运行环境PHP 5 &gt;= 5.5.0</p>
-<p>2.导入数据库结构，直接导入magichecker.sql，为magichecker数据库添加一个访问的用户名和密码</p>
-<p>3.生成访问密码，打开页面：</p>
-<p><a href="http://hhacker.com/wp-content/uploads/2015/01/loginform.png"><amp-img class="alignnone size-full wp-image-862 amp-wp-enforced-sizes" src="http://hhacker.com/wp-content/uploads/2015/01/loginform.png" alt="loginform" width="480" height="464" layout="intrinsic"><noscript><img class="alignnone size-full wp-image-862" src="http://hhacker.com/wp-content/uploads/2015/01/loginform.png" alt="loginform" width="480" height="464"></noscript></amp-img></a></p>
-<p>输入管理密码明文并回车 得到管理密文：</p>
-<p><a href="http://hhacker.com/wp-content/uploads/2015/01/adminpwd1.png"><amp-img class="alignnone size-full wp-image-864 amp-wp-enforced-sizes" src="http://hhacker.com/wp-content/uploads/2015/01/adminpwd1.png" alt="adminpwd" width="387" height="163" layout="intrinsic"><noscript><img class="alignnone size-full wp-image-864" src="http://hhacker.com/wp-content/uploads/2015/01/adminpwd1.png" alt="adminpwd" width="387" height="163"></noscript></amp-img></a></p>
-<p>4.进入任意域名dns管理页面，新建子域名txt记录，内容为以上生成的管理密文</p>
-<p><a href="http://hhacker.com/wp-content/uploads/2015/01/dnsrecord.png"><amp-img class="alignnone size-full wp-image-865 amp-wp-enforced-sizes" src="http://hhacker.com/wp-content/uploads/2015/01/dnsrecord.png" alt="dnsrecord" width="787" height="151" layout="intrinsic"><noscript><img class="alignnone size-full wp-image-865" src="http://hhacker.com/wp-content/uploads/2015/01/dnsrecord.png" alt="dnsrecord" width="787" height="151"></noscript></amp-img></a></p>
-<p>5.开始配置magichecker.php文件（文件无需放到根目录 任意目录皆可）<br><code><br>
-/* 配置区域 */<br>
-$config['debug'] = false;<br>
-$config['username'] = "admin"; //用户名<br>
-$config['password'] = "pass.fx182.com"; //TXT密码解析域名<br>
-$config['domain'] = "test.com"; //对应域名<br>
-$config['sqlserver'] = "localhost"; //sql数据库地址<br>
-$config['sqluser'] = "root"; //sql用户名<br>
-$config['sqlpwd'] = "root"; //sql密码<br>
-$config['sqldb'] = "magichecker"; //数据库名称<br>
-$config['email'] = ""; //接收检测报告的email地址 留空表示不发送email<br>
-$config['ext'] = array(); //需要检测的文件扩展名 留空表示检测所有 array("php","html","js")<br>
-$config['skip'] = array(".svn"); //跳过检测的文件路径 包含该路径下的所有文件 示例:array(".svn","upload");</code></p>
-<p>6.使用用户名和密码登录,点击“开始完整性校验”</p>
-<p><a href="http://hhacker.com/wp-content/uploads/2015/01/letscheck.png"><amp-img class="alignnone wp-image-866 size-full amp-wp-enforced-sizes" src="http://hhacker.com/wp-content/uploads/2015/01/letscheck.png" alt="letscheck" width="1339" height="777" layout="intrinsic"><noscript><img class="alignnone wp-image-866 size-full" src="http://hhacker.com/wp-content/uploads/2015/01/letscheck.png" alt="letscheck" width="1339" height="777"></noscript></amp-img></a></p>
-<p>7.查看数据内容，移动到页面底部，点击“我确认以上更改并签署文件哈希值”并提交。</p>
-<p><a href="http://hhacker.com/wp-content/uploads/2015/01/confirmhash.png"><amp-img class="alignnone size-full wp-image-867 amp-wp-enforced-sizes" src="http://hhacker.com/wp-content/uploads/2015/01/confirmhash.png" alt="confirmhash" width="1205" height="301" layout="intrinsic"><noscript><img class="alignnone size-full wp-image-867" src="http://hhacker.com/wp-content/uploads/2015/01/confirmhash.png" alt="confirmhash" width="1205" height="301"></noscript></amp-img></a></p>
-<p>8.完成后页面底部会提示成功或失败，以下为成功截图：</p>
-<p><a href="http://hhacker.com/wp-content/uploads/2015/01/success.png"><amp-img class="alignnone size-full wp-image-868 amp-wp-enforced-sizes" src="http://hhacker.com/wp-content/uploads/2015/01/success.png" alt="success" width="497" height="98" layout="intrinsic"><noscript><img class="alignnone size-full wp-image-868" src="http://hhacker.com/wp-content/uploads/2015/01/success.png" alt="success" width="497" height="98"></noscript></amp-img></a></p>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[运维]]></title>
-        <id>https://jiansing.github.io/post/yun-wei/</id>
-        <link href="https://jiansing.github.io/post/yun-wei/">
-        </link>
-        <updated>2020-03-13T14:29:15.000Z</updated>
-        <content type="html"><![CDATA[<h2>yum update更新的时候，内存不足溢出完蛋了，安装包出现很多duplicate之类的。</h2>
-<pre>rpm -e --nodeps `package-cleanup --dupes|awk '{ a=1-a; if(!a) print $0 }'`</pre>
-<h2><em>There are unfinished transactions remaining</em>. <em>You might consider running yum-</em><wbr><em>complete-transaction first to finish them</em>.</h2>
-<pre>yum-complete-transaction --cleanup-only</pre>
-<h2>怎么查看磁盘使用情况？</h2>
-<pre>df -h</pre>
-<h2>用了centmin之后磁盘空间不够了怎么办？</h2>
-<pre>ccache -C</pre>
-<pre>du -sh /svr-setup</pre>
-<pre>cd /svr-setup/
-rm -rf /svr-setup/*</pre>
-<pre>cd /usr/local/nginxbackup
-rm -rf /usr/local/nginxbackup/nginxdirbackup/*
-rm -rf /usr/local/nginxbackup/confbackup/*</pre>
-<h2>不记得nginx的路径了</h2>
-<pre>which nginx</pre>
-<p>或</p>
-<pre>ps aux | grep nginx</pre>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[海尔空调连不上wifi怎么办-物联网时代的现状和]]></title>
-        <id>https://jiansing.github.io/post/hai-er-kong-diao-lian-bu-shang-wifi-zen-me-ban-wu-lian-wang-shi-dai-de-xian-zhuang-he/</id>
-        <link href="https://jiansing.github.io/post/hai-er-kong-diao-lian-bu-shang-wifi-zen-me-ban-wu-lian-wang-shi-dai-de-xian-zhuang-he/">
-        </link>
-        <updated>2020-03-13T14:27:48.000Z</updated>
-        <content type="html"><![CDATA[<p>双11买的空调到货了，安装师傅安装后，无聊地翻看说明书时发现空调可以连Wifi变身”智能”空调，就把家里的两台海尔空调都连上Wifi来了。
-</p>
-<h1>体验流程<br></h1>
-<ol><li>
-<div>下载App”海尔好空气”
-</div>
-<p><amp-img src="https://hhacker.com/wp-content/uploads/2018/11/111718_0744_Wifi1-1.png" alt="" width="220" height="371" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2018/11/111718_0744_Wifi1-1.png" alt="" width="220" height="371" class=""></noscript></amp-img><br><amp-img src="https://hhacker.com/wp-content/uploads/2018/11/111718_0744_Wifi2-1.png" alt="" width="220" height="371" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2018/11/111718_0744_Wifi2-1.png" alt="" width="220" height="371" class=""></noscript></amp-img></p>
-<p>在小米商店里评分高达1.0，评论区更是各种吐槽，初步估计应该是产品闭环上有短板，导致用户体验很差或者根本体验不了。
-</p>
-</li>
-<li>幸运的是我的小米6安装后未出现评论区的闪退情况，也许是已经修复了。
-</li>
-<li>按照说明里的，将空调插头拔下，再插上，开启空调，调到制冷，风量最低，温度30°（制冷时所能设置的最高温度），这个时候按照上面所说，空调应该是属于<strong>冷</strong>启动了。
-</li>
-<li>在海尔好空气app里点击绑定空调，这个时候手机需要连上Wifi，否则它不会让你进入下一步。
-</li>
-<li>然后app开始搜索可以连接的空调，过了5~10秒的样子听到空调<strong>滴</strong>了一声，不知道是不是空调Wifi开启的标志。
-</li>
-<li>这个时候正常情况应该出现一个可以连接的空调选项，点击进去（如果没有也没关系，会提示你手动连接）
-</li>
-<li>App提示你连接空调创建的一个Wifi （这里app会申请wifi管理权限，一定要点同意），SSID是XX-XXXX（XXXX可能是设备相关的一个编号），连接了之后返回app，出现一个百分比进度条（此时是无法上网的状态），过了一会儿它又提示你连回原来的可以上网的Wifi，再回到app后，正常情况下就绑定成功了。
-</li>
-<li>
-<div>在路由器上可以看到这样的设备连接，就是空调本尊没错了。
-</div>
-<p><amp-img src="https://hhacker.com/wp-content/uploads/2018/11/111718_0744_Wifi3-1.png" alt="" width="435" height="275" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2018/11/111718_0744_Wifi3-1.png" alt="" width="435" height="275" class=""></noscript></amp-img></p>
-</li>
-</ol><h1>功能亮点<br></h1>
-<p>对于我而言功能亮点主要有以下几点：
-</p>
-<ol><li>在手机app有网络的任何地方，控制家里的空调开关，设定温度，比如在盛夏回家前就把空调早早打开，这样到家就能体会到舒适的温度。
-</li>
-<li>电量记录，空调作为耗电大户，能对其电量进行监控自然是意义非凡的，虽然说最终仍然要以电表为准，但是对电力的应用和管控非常有时代感。
-</li>
-<li>定时开关，这个是和第一点相辅相成的，其实就是设定场景，在指定时间开启，在指定时间关闭，最大化的减少浪费
-</li>
-</ol><h1>故障排查<br></h1>
-<p>其实原本没有这一节的，但是我在绑定第二台空调时出现了匪夷所思的问题，打1分评价的人应该多数都是卡在了这一环节，就是绑定空调绑定不了，我的操作和操作第一台时明明一模一样，然后上网查了一下海尔官方的一个故障说明：
-</p>
-<h1><span class="amp-wp-32f15ec">5.11使用”海尔好空气”APP，无法绑定设备或绑定失败怎么办?<br></span></h1>
-<p><span class="amp-wp-e0d1dfb">答:<br></span></p>
-<ol><li><span class="amp-wp-e0d1dfb">请检查路由器是否开启？<br></span></li>
-<li><span class="amp-wp-e0d1dfb">请检查路由器是否接入互联网？网络是否正常？<br></span></li>
-<li><span class="amp-wp-e0d1dfb">请检查路由器信号是否太弱？<br></span></li>
-<li><span class="amp-wp-e0d1dfb">请检查绑定时输入的wifi密码是否正确？<br></span></li>
-<li><span class="amp-wp-e0d1dfb">请检查wifi名称长度，保证wifi名称的长度大于1位小于30位，wifi密码长度小于30位；<br></span></li>
-<li><span class="amp-wp-e0d1dfb">请检查路由器的设置，查看”路由器-&gt;无线设置-&gt;基本设置”中的模式设置，尝试选择非bgn的模式后重新进行绑定<br></span></li>
-<li><span class="amp-wp-e0d1dfb">设备进入配置模式（空调重新上电，并设置成开机、制冷、低风、30度状态；净化器、魔方重新上电，同时长按定时、风速键直到wifi指示灯闪烁），时间超过10分钟仍未开始绑定；<br></span></li>
-<li><span class="amp-wp-e0d1dfb">将设备重新上电并进入配置模式(（空调重新上电，并设置成开机、制冷、低风、30度状态；净化器、魔方重新上电，同时长按定时、风速键直到wifi指示灯闪烁；桌面净化器重新上电，同时长按送风和高速键直到wifi指示灯闪烁),重新绑定。<br></span></li>
-</ol><p>然而并没有什么用，并且个人也不相信wifi  ssid长度过长或wifi密码过于复杂导致无法连接这样的说辞，有这种信念我还不如去求菩萨了。
-</p>
-<p>主要的报错信息就是这个：
-</p>
-<p><amp-img src="https://hhacker.com/wp-content/uploads/2018/11/111718_0744_Wifi4-1.png" alt="" width="227" height="383" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2018/11/111718_0744_Wifi4-1.png" alt="" width="227" height="383" class=""></noscript></amp-img></p>
-<p>当前Wifi无法连接服务器 请检查家庭网络设置
-</p>
-<p>这里在长达一个小时的排查猜测之后，得出了以下宝贵经验，来来来，老师划重点了。
-</p>
-<ol><li>如果你在添加设备过程中，听到空调 滴 滴 了两声，并且空调上显示的设定的温度从30°调到了29°，那么其实你已经配对成功了的，但是app上显示上图的报错，看不到设备还是用不了，这个时候怎么办呢，关掉空调拔下插头，按照说明书里的流程<strong>重置</strong>一下空调
-</li>
-<li>在切换到空调自建Wifi时，一定要确保手机不会自动切到你原来可以上网的Wifi，我在尝试时就多次是这种情况，因为这个空调自建Wifi不能上网，所以MIUI会给自动切到原来可以上网的Wifi（orz），这个时候应该怎么办呢，凉拌，在确定连接到自建wifi后立马回到app，然后一定时间的等待后会出现提示你切换到原来可以上网的那个Wifi去，请注意，这个提示是成功之前的一个非常的明确的标记，如果没有看到这个提示，说明直接就失败了。
-</li>
-<li>Wifi信号过弱的问题，这里比较专业了，wifi信号强度应该大于-60dBm，如果你用wifi分析仪看的话，-60dBm是区分信号普通和优秀的一个分水岭，如果可以的话，把路由器移动到和空调之间无阻挡（主要是墙，当然金属也是不可以的）的位置，距离远一些其实都关系不大，现在的千M家用Wifi其实已经很强劲了，除了穿墙不行其它什么都行。
-</li>
-<li>以上如果试过还不行，那就是我这边没有遇到过的问题了，对于最后那个报错的图，我可以帮忙解释说空调wifi模块对信号很敏感，但是多半读者也不会信，其实按照那个报错的逻辑，会让用户觉得是手机连的wifi信号不好，但是明明又是可以上网的，所以会很困惑，但是据我推测，其实是因为空调连路由器时如果你的wifi信号不是很好就会需要比较多的时间去连接（DHCP也需要耗时），而这个app的逻辑只给你大概3秒的时间，如果3秒没连上就直接跳到报错那一步了，这也解释了第一点的那种情况出现的原因。
-</li>
-</ol><p>
- </p>
-<h1>物联网时代的现状与未来<br></h1>
-<p>这里算是课外阅读了，不想看的观众直接叉掉网页吧。
-</p>
-<p>从我今天的体验来看，现在电器在物联网这一块做得并不好，物联网的核心就是设备上网，如果设备上网成为短板那后续的高大上的东西都是空中楼阁。
-</p>
-<p>海尔空调连Wifi的条件过于苛刻导致很多用户就使用不了后续的任何智能功能，希望以后能出现更好更可用的方式让设备快速联网。
-</p>
-<p>我们来看一下物联网时代的非凡意义：
-</p>
-<ol><li>电量的精准控制（不在乎电费的人也喜欢看到具体的设备耗电）
-</li>
-<li>电器的场景智能化（这才是20世纪科幻小说里畅想的21世纪该有的样子）
-</li>
-<li>终端电器不再成为终结点，物联网电器可以作为数据的生产者为大数据时代提供可靠、匿名的行为数据
-</li>
-<li>电器成果的精确化、数量化，这一点在空气净化器领域尤其显著，公众对PM2.5现在已经非常关心了，说明生活质量提高以后人们开始追求更高层次的生活品质。
-</li>
-<li>终端电器同时也可以作为数据的消费者，通过冰箱去购物就是一个非常好的应用场景，《硅谷》里的智能冰箱做到了比这更牛逼的事情（变成了分布式存储）
-</li>
-<li>基于万物皆可联网的思想，以后人类是不是也可以通过生物设备直接上网而无需通过第三方设备，那对自身的生理状况的监测和管理可能就会出现科幻电影里那样的场景了。</li>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[警惕一种新型浏览器广告劫持]]></title>
-        <id>https://jiansing.github.io/post/jing-ti-yi-chong-xin-xing-liu-lan-qi-guang-gao-jie-chi/</id>
-        <link href="https://jiansing.github.io/post/jing-ti-yi-chong-xin-xing-liu-lan-qi-guang-gao-jie-chi/">
-        </link>
-        <updated>2020-03-13T14:25:14.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<p class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">今天在搜索某个关键字的时候，不小心中招了一个浏览器广告劫持工具，像我这种万年老司机都中招，可见这种<strong>劫持</strong>多具有<strong>欺骗性</strong>了，让我们来复盘看看是怎么回事。<br></span></p>
-<p class="amp-wp-e912ca6"><span class="amp-wp-3df2e3d"><strong>劫持复盘<br></strong></span></p>
-<ul><li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">使用搜索引擎搜索某关键字”XXXX”<br></span></div>
-</li>
-<li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">点击搜索结果，页面被跳转到https://robotcaptcha3.info/robot3/index.html?cid=********************<br></span></div>
-</li>
-<li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">页面显示如下内容：<br></span></div>
-<p class="amp-wp-e912ca6"><amp-img src="https://hhacker.com/wp-content/uploads/2019/08/081119_1343_1.jpg" alt="" width="800" height="548" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2019/08/081119_1343_1.jpg" alt="" width="800" height="548" class=""></noscript></amp-img><span class="amp-wp-e700d2b"><br></span></p>
-</li>
-<li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">如果点击允许，页面会进一步跳转：<br></span></div>
-<p class="amp-wp-e912ca6"><amp-img src="https://hhacker.com/wp-content/uploads/2019/08/081119_1343_2.jpg" alt="" width="800" height="424" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2019/08/081119_1343_2.jpg" alt="" width="800" height="424" class=""></noscript></amp-img><span class="amp-wp-e700d2b"><br></span></p>
-<p class="amp-wp-f836371"><span class="amp-wp-e8227d7">这里直接就是一个广告页面了<br></span></p>
-</li>
-<li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">这个跳转到的页面是随机的一个广告页面，根本不是你搜索到的网页（过分了啊，老哥，好歹跳到落地页嘛）<br></span></div>
-</li>
-<li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">这个时候浏览器已经被这个通知广告劫持了，打开其它网页的时候，它会使用浏览器的消息通知功能随机给你推送广告，频率并不会很高（相当机智啊）<br></span></div>
-<p class="amp-wp-e912ca6"><amp-img src="https://hhacker.com/wp-content/uploads/2019/08/081119_1343_3.jpg" alt="" width="800" height="386" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2019/08/081119_1343_3.jpg" alt="" width="800" height="386" class=""></noscript></amp-img><span class="amp-wp-e700d2b"><br></span></p>
-<p class="amp-wp-f836371"><span class="amp-wp-e8227d7">浏览器通知广告示例<br></span></p>
-<p class="amp-wp-e912ca6"><span class="amp-wp-3df2e3d"><strong>劫持分析<br></strong></span></p>
-</li>
-</ul><ol><li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">这种方式的劫持非常具有欺骗性，跳转域名带captcha字样，给人感觉第一印象是recaptcha之类的前置机器人识别功能，以为跟随其引导操作能到达落地页<br></span></div>
-</li>
-<li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">后续的广告弹出是随机的，非常具有隐蔽性<br></span></div>
-</li>
-<li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">普通用户对<strong>浏览器通知</strong>（Web Notifications）这种技术还是相当陌生的，即不知道是什么，也不知道如何处理。<br></span></div>
-</li>
-<li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">目前还只在国外网站有看到这种劫持<br></span></div>
-</li>
-<li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">这种劫持的扩散方式是通过用户访问被劫持（黑掉）的网页来到达的，对受害网站的流量不会100%劫持，最常见的是按百分比去控制，也有按时段、地域去控制的（对于网站管理员所在国家/地区不劫持），所以对于小型网站的管理员而言，有时候很难察觉到网站已经被黑了。<br></span></div>
-<p class="amp-wp-e912ca6"><span class="amp-wp-3df2e3d"><strong>如何解决<br></strong></span></p>
-<p class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">解决方式很简单，在浏览器设置里去掉劫持网站的消息通知授权就可以了，这里以Chrome浏览器为例：<br></span></p>
-</li>
-</ol><ul><li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">打开浏览器设置，搜索”网站设置”<br></span></div>
-<p class="amp-wp-e912ca6"><amp-img src="https://hhacker.com/wp-content/uploads/2019/08/081119_1343_4.jpg" alt="" width="800" height="650" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2019/08/081119_1343_4.jpg" alt="" width="800" height="650" class=""></noscript></amp-img><span class="amp-wp-e700d2b"><br></span></p>
-</li>
-<li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">在网站设置中找到”通知”<br></span></div>
-<p class="amp-wp-e912ca6"><amp-img src="https://hhacker.com/wp-content/uploads/2019/08/081119_1343_5.jpg" alt="" width="800" height="488" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2019/08/081119_1343_5.jpg" alt="" width="800" height="488" class=""></noscript></amp-img><span class="amp-wp-e700d2b"><br></span></p>
-</li>
-<li>
-<div class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">在”通知”中去除可疑的授权<br></span></div>
-<p class="amp-wp-e912ca6"><span class="amp-wp-3df2e3d"><strong>后续思考<br></strong></span></p>
-<p class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">浏览器通知其实是非常实用的功能，有相当多的网站使用了这一功能，最方便的是网站可以在浏览器窗口最小化的情况下，在桌面右下角实时弹出信息，同时，它也和任何便捷功能一样存在被人滥用的问题，在<strong>利益的驱动</strong>下，这些制作病毒、流氓（广告）软件的人的智慧几乎是无穷的，普通用户在他们的连环组合拳的打击下几乎毫无还手之力。<br></span></p>
-<p class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">但是我相信浏览器厂商会在原有的<strong>默认授权提示</strong>上做出更多安全性的保障，即便目前来说这种广告劫持是完全合法地使用了消息通知功能（<strong>用户的确有点击授权</strong>），总而言之，好的浏览习惯会帮助用户更安全的上网冲浪，对于浏览器的授权提示（包括消息通知、位置、摄像头、麦克风等），一定要确认好网站方是否可信再进行点击。<br></span></p>
-<p class="amp-wp-e912ca6"><span class="amp-wp-3df2e3d"><strong>技术背景<br></strong></span></p>
-<p class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">Web Notifications API 使页面可以发出通知，通知将被显示在页面之外的系统层面上（通常使用操作系统的标准通知机制，但是在不同的平台和浏览器上的表现会有差异）。这个功能使 web 应用可以向用户发送信息，即使应用处于空闲状态。最明显的用例之一是一个网页版电子邮件应用程序，每当用户收到了一封新的电子邮件都需要通知用户，即使用户正在使用另一个应用程序。<br></span></p>
-<p class="amp-wp-2a01cf8"><span class="amp-wp-205acb7"><span class="amp-wp-4834cc6">Notification.requestPermission( function(status) {<br> console.log(status); // </span><span class="amp-wp-e3360ce">仅当值为</span><span class="amp-wp-4834cc6"> “granted” </span><span class="amp-wp-e3360ce">时显示通知</span><span class="amp-wp-4834cc6"><br> var n = new Notification(“title”, {body: “notification body”}); // </span><span class="amp-wp-e3360ce">显示通知</span><span class="amp-wp-4834cc6"><br>});<br></span></span></p>
-<p class="amp-wp-e912ca6"><span class="amp-wp-e700d2b">https://developer.mozilla.org/zh-CN/docs/Web/API/notification/Using_Web_Notifications<br></span></p>
-</li>
-</ul>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[罗胖的滑铁卢：情怀在商业社会的失败]]></title>
-        <id>https://jiansing.github.io/post/luo-pang-de-hua-tie-lu-qing-huai-zai-shang-ye-she-hui-de-shi-bai/</id>
-        <link href="https://jiansing.github.io/post/luo-pang-de-hua-tie-lu-qing-huai-zai-shang-ye-she-hui-de-shi-bai/">
-        </link>
-        <updated>2020-03-13T14:24:17.000Z</updated>
-        <content type="html"><![CDATA[<blockquote><p>最早对于罗永浩的印象，是这段关于中杯大杯特大杯的视频，当时看得让人捧腹。</p></blockquote>
-<p><amp-anim src="https://hhacker.com/wp-content/uploads/2019/11/110419_0246_1.gif" alt="" width="499" height="274" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2019/11/110419_0246_1.gif" alt="" width="499" height="274" class=""></noscript></amp-anim></p>
-<h2>之后更多的是一些标签式的印象：<strong>英语老师</strong>，<strong>创业</strong>，<strong>锤子科技</strong>，<strong>锤子手机</strong>，<strong>发布会</strong>，<strong>情怀</strong>，<strong>重新定义</strong>，<strong>坚果TNT工作站</strong>。</h2>
-<p>现在看到其被限制消费的新闻，却没有多少意外的感觉。</p>
-<p><a href="https://www.toutiao.com/a6755052219806007816/"><strong>罗永浩回应被限制消费：已经还掉3亿，锤子科技会继续做下去</strong></a><strong><br></strong></p>
-<p>究其原因，无非是我很确信”情怀模式”是走不下去的，现在的”情怀”有深，以后就会摔得有多痛。</p>
-<p>今天打开头条，就被这篇”<strong>自白</strong>“给刷屏了，罗永浩一如既往的讲故事，讲情怀，水准还是很高，但是我不得不说，将这样的自白行为，其实离”老赖”的定义更近一些，于是我打开罗永浩的百科条目，想看看自己是否漏掉了什么必要信息，以免写出过于主观的文章，于是就有本文。</p>
-<p><amp-img src="https://hhacker.com/wp-content/uploads/2019/11/110419_0246_2.jpg" alt="" width="600" height="2308" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2019/11/110419_0246_2.jpg" alt="" width="600" height="2308" class=""></noscript></amp-img></p>
-<h1>情怀、理想和PPT</h1>
-<p>我们先来列举一下罗胖这些年的辉煌事迹：</p>
-<ol><li>2001-2006 新东方学校英语讲师（早期标签）</li>
-<li>2008 牛博网创始人</li>
-<li>2011 西门子冰箱维权（著名的现场锤砸冰箱事件）</li>
-<li>
-<div>2012 创立锤子科技</div>
-<ol><li>2014 Smartisan T1</li>
-<li>2015 坚果手机</li>
-<li>2015 Smartisan T2</li>
-<li>2016 锤子M1&amp;M1L智能手机</li>
-<li>2017 坚果Pro智能手机</li>
-<li>2018 坚果TNT工作站（现场承认玩砸了）</li>
-<li>2018 坚果Pro2S智能手机</li>
-<li>2019 被字节跳动并购/收购</li>
-</ol></li>
-</ol><p>稍微看过一点锤子发布会的人，应该都知道罗胖是一个很有激情的创业者，演讲稿/文章都写得特别好，锤子手机一些体验/UI上得设定确实很有<strong>匠心</strong>，这也是罗永浩的初心，希望自己能成为一个<strong>工匠</strong>，而不是一个爱吹牛皮的人。</p>
-<p><amp-img src="https://hhacker.com/wp-content/uploads/2019/11/110419_0246_3.jpg" alt="" width="480" height="319" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2019/11/110419_0246_3.jpg" alt="" width="480" height="319" class=""></noscript></amp-img></p>
-<p>说实话，罗胖真的是一个很有梦想并且有勇气去挑战一切的人，他希望自己成为一个实实在在的人，却不得不靠一次又一次在发布会卖艺，靠<strong>情怀、理想和PPT</strong>去带货，去说服投资人，其实在说服投资人上，罗永浩是非常之成功的，不然也不会有这么多资本堆积去让他实现自己的梦]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[等等，你的密码就是你的生日？]]></title>
-        <id>https://jiansing.github.io/post/deng-deng-ni-de-mi-ma-jiu-shi-ni-de-sheng-ri/</id>
-        <link href="https://jiansing.github.io/post/deng-deng-ni-de-mi-ma-jiu-shi-ni-de-sheng-ri/">
-        </link>
-        <updated>2020-03-13T12:42:17.000Z</updated>
-        <content type="html"><![CDATA[<p>在网络安全越来越重要的今天，仍然有很多人选择使用生日日期作为自己的密码，或者是123456、qwer1234之类的弱密码，我们今天的主题就是密码安全和我们息息相关的那些事。<br>
-首先我们了解一个概念，什么是弱密码，在维基百科上，对弱密码的定义是易于猜测的密码，事实上，弱密码其实就是那些基于公开/半公开信息而建立的密码，比如你的名字，你的生日，你们的结婚纪念日，你孩子的生日等等。而这些公开/半公开的信息其实是很容易被别有用心的人获取，至于为什么，等下会讲到。</p>
-<p><amp-img src="https://hhacker.com/wp-content/uploads/2020/02/022020_1310_1.jpg" alt="" width="521" height="333" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2020/02/022020_1310_1.jpg" alt="" width="521" height="333" class=""></noscript></amp-img></p>
-<p>弱密码<br>
-首先我们了解一个概念，什么是弱密码，在维基百科上，对弱密码的定义是易于猜测的密码，事实上，弱密码其实就是那些基于公开/半公开信息而建立的密码，比如你的名字，你的生日，你们的结婚纪念日，你孩子的生日等等。而这些公开/半公开的信息其实是很容易被别有用心的人获取，至于为什么，等下会讲到。</p>
-<p>我们来看一看一些常见的弱密码：</p>
-<p>123456<br>
-a123456<br>
-123456a<br>
-5201314<br>
-111111<br>
-woaini1314<br>
-qq123456<br>
-123123<br>
-000000<br>
-1qaz2wsx<br>
-1q2w3e4r<br>
-qwe123<br>
-7758521<br>
-无论什么时候都应该避免使用弱密码，因为这些密码实在是太多人使用了，用这些密码跟裸奔几乎没什么区别。</p>
-<p>密码是怎么泄露的<br>
-很多人会非常奇怪，我使用的密码是是自己的生日+名字等混合起来的，或者是是非常复杂的密码，为什么会被盗？</p>
-<p>首先，很多账户被盗事件，都不是针对个人的行为，而是在大规模的洗库操作中被批量攻击了账号，而这些批量攻击的目的，是为了攫取利益，我们来举一个例子。</p>
-<p>小A是一个程序员，很久以前他在CSDN注册了一个账号，使用的是自己常用的密码a123123，而他在网易邮箱也注册有一个账号，他为了玩魔兽世界，用这个邮箱注册了战网通行证，我们看一下会发生什么事情。</p>
-<p>CSDN被入侵<br>
-CSDN整个用户数据库被暴库<br>
-CSDN使用明文保存了用户的密码<br>
-入侵者编写工具，用CSDN的密码去批量对网易邮箱撞库<br>
-小A的网易邮箱因为使用了同样的密码而被攻破<br>
-入侵者把攻破的邮箱密码记录起来，发放给下游<br>
-下游拿到邮箱账号和密码的登陆权限，寻找可以获利的地方<br>
-很快他们发现小A的魔兽世界账号有很多金币和资源并洗劫一空<br>
-这是个基于真实案例的例子，可笑的是，网易邮箱后来也因为严重的漏洞而被暴库，在爆出的数据库里，它也用明文保存密码，那次事件后，网易邮箱引导大多数用户建立了手机短信二次验证。</p>
-<p>这里我们不去深究他们为什么要用明文去保存用户的密码，小A损失的只是游戏里的虚拟资产，而很多人损失了实实在在的金钱。</p>
-<p>这是一个真实存在的黑色产业链，所以不要奇怪为什么自己没有在不安全的环境中登陆过，账号却依旧被盗了，只要有利益，这些人什么事情都做得出来。</p>
-<p>这还只是批量的密码盗窃，还有专门针对性的密码攻击行为，比如社会工程学攻击，攻击者可以根据你公开/半公开的信息直接猜出你的密码，上网越久，你在网上留下的痕迹也越多，而这些攻击者就是通过挖掘这些痕迹来攻击你的。</p>
-<p>很可怕，是不是？</p>
-<p>选择强壮的密码<br>
-很多人选择弱密码的一个重要的原因就是为了好记，或者怕自己记不住复杂的密码而丢掉账号，这其实是个误区。</p>
-<p>人的大脑不仅擅长于记忆规则的信息，对于不规则的信息其实也可以轻松记忆，只要不断地回顾、使用这些信息，要忘掉是件很难的事情。</p>
-<p>选择一个类似于en12Kdlz;#sp1*cnc,zk!d这样毫无规律可言的随机密码，能大大增强你账号的安全性，但是我们的账号那么多，不可能每一个网站/app都记忆一个这样复杂的密码，对不对？放心，有办法的。</p>
-<p>安全建议<br>
-使用至少16位长度的密码（密码越长，被遍历破解的难度越大）<br>
-对于不同的网站/app使用不同的密码<br>
-能够开启二次验证的网站/服务一定要开启二次验证（这里通常都是短信验证，虽然短信也是可以被攻击截取的，但这种针对性的攻击其实很罕见，普通人也遇不到，所以短信验证其实是目前非常行之有效的安全校验方式）<br>
-随机生成密码，而不是基于自己的生日、名字等信息构造密码<br>
-使用诸如keepass之类的密码管理工具对自己的密码进行统一管理（https://keepass.info/）<br>
-对于不太重要的网站，直接使用chrome的密码工具生成并保存密码，这样在浏览器内，这些密码就能时刻保存并自动填充到密码框里了<br>
-不要在微信/QQ等聊天工具里发送密码<br>
-密码之所以叫做密码，是为了私密的使用，所以，不要和别人共享你的密码<br>
-每个人都应该重视密码安全的问题，因为在网络空间里，这关系到你的数据安全边界，如果这个边界没有了，又被别有用心的人利用的话，那损失可就大了。</p>
-<p>所以，拜托了，不要用自己的生日做密码，好不好？</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Test]]></title>
-        <id>https://jiansing.github.io/post/test/</id>
-        <link href="https://jiansing.github.io/post/test/">
-        </link>
-        <updated>2020-03-13T12:36:04.000Z</updated>
-        <content type="html"><![CDATA[<p>😉test<br>
-<amp-img src="https://hhacker.com/wp-content/uploads/2020/02/022020_1310_1.jpg" alt="" width="521" height="333" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2020/02/022020_1310_1.jpg" alt="" width="521" height="333" class=""></noscript></amp-img></p>
+        <updated>2020-03-14T13:14:26.000Z</updated>
+        <content type="html"><![CDATA[<p>移植于wordpress的同名主题 InlineAMP 。（<a href="https://github.com/justid/InlineAMP">原主题Github</a>）</p>
+<p>InlineAMP 是一款纯<a href="https://amp.dev/">AMP</a>主题，采用了经典的两栏博客布局，适合喜欢极简设计、比较在意页面打开速度的博主使用。</p>
+<p>仓库下载：https://github.com/jiansing/gridea-theme-inlineamp</p>
+<h2 id="继承了原主题的一些特点">继承了原主题的一些特点：</h2>
+<ul>
+<li>纯AMP主题（极致速度体验）</li>
+<li>移动端/PC端响应式布局（Flex布局）</li>
+<li>Pure CSS design（无图设计）</li>
+<li>极简&amp;科技风格（简约但不简单）</li>
+</ul>
+<h2 id="目前实现的自定义配置">目前实现的自定义配置：</h2>
+<h3 id="顶部标语">顶部标语</h3>
+<p>可以设置主/副标语，将显示在每个页面的顶端</p>
+<h3 id="个人信息">个人信息</h3>
+<p>在这里填写作者名称</p>
+<h3 id="友链">友链</h3>
+<p>目前仅能在侧边栏自定义友链</p>
+<h3 id="google-analytics">Google Analytics</h3>
+<p>可以添加Google Analytics</p>
+<h3 id="语言">语言</h3>
+<p>用于设置 html lang 属性，默认设置为简体中文(zh-Hans)，一般用默认设置即可</p>
+<h2 id="使用提示">使用提示</h2>
+<p>由于用了AMP技术，需要遵循<a href="https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/">AMP HTML规范</a> ，插入图片需要使用特殊的方式插入</p>
+<p><amp-img></amp-img></p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://jiansing.github.io/post/hello-gridea/</id>
-        <link href="https://jiansing.github.io/post/hello-gridea/">
+        <id>https://jiansing.github.io/hello-gridea/</id>
+        <link href="https://jiansing.github.io/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
