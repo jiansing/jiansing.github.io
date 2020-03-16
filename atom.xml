@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://jiansing.github.io</id>
+    <id>https://blog.ofo.moe</id>
     <title>Jiansing&apos;s blog</title>
-    <updated>2020-03-15T13:19:02.040Z</updated>
+    <updated>2020-03-16T03:56:51.298Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://jiansing.github.io"/>
-    <link rel="self" href="https://jiansing.github.io/atom.xml"/>
+    <link rel="alternate" href="https://blog.ofo.moe"/>
+    <link rel="self" href="https://blog.ofo.moe/atom.xml"/>
     <subtitle>&lt;p&gt;念念不忘，必有回响&lt;/p&gt;
 </subtitle>
-    <logo>https://jiansing.github.io/images/avatar.png</logo>
-    <icon>https://jiansing.github.io/favicon.ico</icon>
+    <logo>https://blog.ofo.moe/images/avatar.png</logo>
+    <icon>https://blog.ofo.moe/favicon.ico</icon>
     <rights>All rights reserved 2020, Jiansing&apos;s blog</rights>
     <entry>
         <title type="html"><![CDATA[Gridea Theme InlineAMP (v1.0.0)]]></title>
-        <id>https://jiansing.github.io/gridea-theme-inlineamp/</id>
-        <link href="https://jiansing.github.io/gridea-theme-inlineamp/">
+        <id>https://blog.ofo.moe/gridea-theme-inlineamp/</id>
+        <link href="https://blog.ofo.moe/gridea-theme-inlineamp/">
         </link>
         <updated>2020-03-14T13:14:26.000Z</updated>
         <summary type="html"><![CDATA[<p>移植于wordpress的同名主题 InlineAMP 。（<a href="https://github.com/justid/InlineAMP">原主题Github</a>）</p>
@@ -66,8 +66,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://jiansing.github.io/hello-gridea/</id>
-        <link href="https://jiansing.github.io/hello-gridea/">
+        <id>https://blog.ofo.moe/hello-gridea/</id>
+        <link href="https://blog.ofo.moe/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
