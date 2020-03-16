@@ -2,12 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ofo.moe</id>
     <title>Jiansing&apos;s blog</title>
-    <updated>2020-03-16T05:42:16.506Z</updated>
+    <updated>2020-03-16T14:10:48.364Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ofo.moe"/>
     <link rel="self" href="https://blog.ofo.moe/atom.xml"/>
-    <subtitle>&lt;p&gt;念念不忘，必有回响&lt;/p&gt;
-</subtitle>
+    <subtitle>念念不忘，必有回响</subtitle>
     <logo>https://blog.ofo.moe/images/avatar.png</logo>
     <icon>https://blog.ofo.moe/favicon.ico</icon>
     <rights>All rights reserved 2020, Jiansing&apos;s blog</rights>
