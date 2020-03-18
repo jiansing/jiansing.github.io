@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ofo.moe</id>
     <title>Jiansing&apos;s blog</title>
-    <updated>2020-03-16T14:16:13.337Z</updated>
+    <updated>2020-03-18T14:45:54.798Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ofo.moe"/>
     <link rel="self" href="https://blog.ofo.moe/atom.xml"/>
@@ -11,18 +11,163 @@
     <icon>https://blog.ofo.moe/favicon.ico</icon>
     <rights>All rights reserved 2020, Jiansing&apos;s blog</rights>
     <entry>
-        <title type="html"><![CDATA[Gridea Theme InlineAMP (v1.0.0)]]></title>
+        <title type="html"><![CDATA[Gridea Theme InlineAMP如何添加评论]]></title>
+        <id>https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/</id>
+        <link href="https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/">
+        </link>
+        <updated>2020-03-18T13:44:25.000Z</updated>
+        <summary type="html"><![CDATA[<p>AMP已经提供了对评论的完整支持：<br>
+https://amp.dev/documentation/guides-and-tutorials/develop/login_requiring/add_comment/</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>AMP已经提供了对评论的完整支持：<br>
+https://amp.dev/documentation/guides-and-tutorials/develop/login_requiring/add_comment/</p>
+<!-- more -->
+<p>然而大多数评论系统(比如Gitalk)还没有提供兼容AMP HTML的方法<br>
+目前我找到的可以在AMP HTML上无缝使用的评论系统只有两个(可惜在国内都不能正常访问)</p>
+<h2 id="disqus评论">Disqus评论</h2>
+<p>Github上有详细的使用方法：<br>
+https://github.com/disqus/disqus-install-examples/tree/master/google-amp<br>
+使用Gridea Theme InlineAMP只需要做三件事:</p>
+<ol>
+<li>
+<p>在Gridea评论设置里面<strong><strong>开启评论</strong></strong>并选择<strong><strong>Disqus</strong></strong></p>
+</li>
+<li>
+<p>创建一个HTML文件，复制<a href="https://github.com/disqus/disqus-install-examples/tree/master/google-amp#how-to-install">这段内容</a><br>
+将 <strong><strong>s.src = '//EXAMPLE.disqus.com/embed.js';<strong><strong>中的</strong></strong>EXAMPLE</strong></strong>替换为你的Shortname</p>
+</li>
+<li>
+<p>将这个HTML上传到一个托管静态页面的平台(比如Github)，将HTML的URL填写在主题的自定义配置里。注意这个HTML的域名不能是你的blog的域名</p>
+</li>
+</ol>
+<p>##Facebook评论<br>
+在写这一篇使用说明的时候看到的，比Disqus评论系统更方便引入，下一个版本会加入Facebook评论的支持。<br>
+嵌入Facebook评论插件：<br>
+https://amp.dev/documentation/components/amp-facebook-comments/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gridea Theme InlineAMP 如何嵌入B站视频]]></title>
+        <id>https://blog.ofo.moe/add-video-for-gridea-theme-inlineamp/</id>
+        <link href="https://blog.ofo.moe/add-video-for-gridea-theme-inlineamp/">
+        </link>
+        <updated>2020-03-18T13:33:24.000Z</updated>
+        <summary type="html"><![CDATA[<p><amp-video controls
+  width="640"
+  height="360"
+  src="https://amp.dev/static/inline-examples/videos/kitten-playing.mp4"
+  poster="https://amp.dev/static/inline-examples/images/kitten-playing.png"><br>
+</amp-video></p>
+]]></summary>
+        <content type="html"><![CDATA[<p><amp-video controls
+  width="640"
+  height="360"
+  src="https://amp.dev/static/inline-examples/videos/kitten-playing.mp4"
+  poster="https://amp.dev/static/inline-examples/images/kitten-playing.png"><br>
+</amp-video></p>
+<!-- more -->
+<p>详细的指南:<br>
+AMP添加 iframe:<br>
+https://amp.dev/zh_cn/documentation/guides-and-tutorials/develop/media_iframes_3p/iframes/</p>
+<p>例子:<br>
+<amp-iframe width="800" height="400"
+    sandbox="allow-scripts allow-same-origin"
+    layout="responsive"
+    src="https://player.bilibili.com/player.html?aid=69627579&cid=120661052&page=1"><br>
+</amp-iframe></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gridea Theme InlineAMP 如何嵌入图像，视频和音频]]></title>
+        <id>https://blog.ofo.moe/include-images-and-video/</id>
+        <link href="https://blog.ofo.moe/include-images-and-video/">
+        </link>
+        <updated>2020-03-17T03:07:11.000Z</updated>
+        <summary type="html"><![CDATA[<p><amp-audio src="https://storage.googleapis.com/media-session/sintel/snow-fight.mp3"
+  artwork="https://storage.googleapis.com/media-session/sintel/artwork-512.png"
+  title="Snow Fight"
+  album="Jan Morgenstern"
+  artist="Sintel"
+  height="50"
+  width="auto"
+  controls><br>
+</amp-audio></p>
+<p>Gridea Theme InlineAMP是一款纯AMP主题，若使用Gridea自带的Markdown编辑器插入图片可能出现排版错位的情况。</p>
+<h2 id="为什么会这样">为什么会这样</h2>
+]]></summary>
+        <content type="html"><![CDATA[<p><amp-audio src="https://storage.googleapis.com/media-session/sintel/snow-fight.mp3"
+  artwork="https://storage.googleapis.com/media-session/sintel/artwork-512.png"
+  title="Snow Fight"
+  album="Jan Morgenstern"
+  artist="Sintel"
+  height="50"
+  width="auto"
+  controls><br>
+</amp-audio></p>
+<p>Gridea Theme InlineAMP是一款纯AMP主题，若使用Gridea自带的Markdown编辑器插入图片可能出现排版错位的情况。</p>
+<h2 id="为什么会这样">为什么会这样</h2>
+<!-- more -->
+<p>Gridea将Markdown转化为普通的HTML 网页，而AMP网页需要遵循另外一套<a href="https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/">规范</a>。</p>
+<h2 id="有什么解决方法">有什么解决方法？</h2>
+<p>最简单的方法：如果你只是偶尔在文章里配几张图片，直接插入规范的amp-img标签即可。AMP项目官网给出了使用方法：<br>
+https://amp.dev/zh_cn/documentation/guides-and-tutorials/develop/media_iframes_3p/</p>
+<h2 id="例子">例子</h2>
+<p>在这里我引用了一张<a href="https://visualhunt.com/photo2/612/glaciers-melting-in-polar-climate/">visualhunt</a>上的图片，直接在Gridea的编辑器中输入：</p>
+<p><code>&lt;amp-img alt=&quot;这是一个例子&quot; src=&quot;https://visualhunt.com/photos/1/glaciers-melting-in-polar-climate.jpg?s=l&quot; width=&quot;3000&quot; height=&quot;1987&quot; layout=&quot;responsive&quot;&gt; &lt;/amp-img&gt;</code></p>
+<p>将URL替换为你的图片地址；此外你还需要给每张图片设置尺寸，没有特别需要的话直接填上原图片的宽和高就可以了，图片是自适应的。</p>
+<p>效果：<br>
+<amp-img alt="这是一个例子"
+  src="https://visualhunt.com/photos/1/glaciers-melting-in-polar-climate.jpg?s=l"
+  width="3000"
+  height="1987"
+  layout="responsive"><br>
+</amp-img></p>
+<h2 id="其他方法">其他方法：</h2>
+<p>Github上有将markdown转换为AMP HTML的工具：<br>
+https://github.com/search?q=markdown+to+AMP</p>
+<h2 id="插入视频和音频">插入视频和音频</h2>
+<p>插入视频</p>
+<p><code>&lt;amp-video controls width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://amp.dev/static/inline-examples/videos/kitten-playing.mp4&quot; poster=&quot;https://amp.dev/static/inline-examples/images/kitten-playing.png&quot;&gt; &lt;/amp-video&gt;</code></p>
+<p>效果:<br>
+<amp-video controls
+  width="640"
+  height="360"
+  src="https://amp.dev/static/inline-examples/videos/kitten-playing.mp4"
+  poster="https://amp.dev/static/inline-examples/images/kitten-playing.png"><br>
+</amp-video></p>
+<p>插入音频</p>
+<p><code>&lt;amp-audio src=&quot;https://storage.googleapis.com/media-session/sintel/snow-fight.mp3&quot; artwork=&quot;https://storage.googleapis.com/media-session/sintel/artwork-512.png&quot; title=&quot;Snow Fight&quot; album=&quot;Jan Morgenstern&quot; artist=&quot;Sintel&quot; height=&quot;50&quot; width=&quot;auto&quot; controls&gt; &lt;/amp-audio&gt;</code></p>
+<p>效果:<br>
+<amp-audio src="https://storage.googleapis.com/media-session/sintel/snow-fight.mp3"
+  artwork="https://storage.googleapis.com/media-session/sintel/artwork-512.png"
+  title="Snow Fight"
+  album="Jan Morgenstern"
+  artist="Sintel"
+  height="50"
+  width="auto"
+  controls><br>
+</amp-audio></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gridea Theme InlineAMP (v1.1.0)]]></title>
         <id>https://blog.ofo.moe/gridea-theme-inlineamp/</id>
         <link href="https://blog.ofo.moe/gridea-theme-inlineamp/">
         </link>
-        <updated>2020-03-14T13:14:26.000Z</updated>
-        <summary type="html"><![CDATA[<p>移植于wordpress的同名主题 InlineAMP 。（<a href="https://github.com/justid/InlineAMP">原主题Github</a>）</p>
-<p>InlineAMP 是一款纯<a href="https://amp.dev/">AMP</a>主题，采用了经典的两栏博客布局，适合喜欢极简设计、比较在意页面打开速度的博主使用。</p>
+        <updated>2020-03-16T12:58:37.000Z</updated>
+        <summary type="html"><![CDATA[<p>InlineAMP 是一款纯<a href="https://amp.dev/">AMP</a>主题，设计上简约、干净、响应式，适合喜欢极简设计、比较在意页面打开速度的博主使用。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>移植于wordpress的同名主题 InlineAMP 。（<a href="https://github.com/justid/InlineAMP">原主题Github</a>）</p>
-<p>InlineAMP 是一款纯<a href="https://amp.dev/">AMP</a>主题，采用了经典的两栏博客布局，适合喜欢极简设计、比较在意页面打开速度的博主使用。</p>
+        <content type="html"><![CDATA[<p>InlineAMP 是一款纯<a href="https://amp.dev/">AMP</a>主题，设计上简约、干净、响应式，适合喜欢极简设计、比较在意页面打开速度的博主使用。</p>
 <!-- more -->
 <p>仓库下载：https://github.com/jiansing/gridea-theme-inlineamp</p>
+<h2 id="v03-updated-2020316">v0.3 updated 2020.３.16</h2>
+<p>新增Disqus评论支持<br>
+新增Google站内搜索<br>
+顶部标语可以自定义是否展示<br>
+可以按需加载JS<br>
+修复了多条友链显示不正常的Bug<br>
+修复了文章页不显示分类目录(即标签)的Bug</p>
+<p>移植于wordpress的同名主题 InlineAMP 。（<a href="https://github.com/justid/InlineAMP">原主题Github</a>）</p>
 <h2 id="继承了原主题的一些特点">继承了原主题的一些特点：</h2>
 <ul>
 <li>纯AMP主题（极致速度体验）</li>
@@ -30,36 +175,59 @@
 <li>Pure CSS design（无图设计）</li>
 <li>极简&amp;科技风格（简约但不简单）</li>
 </ul>
-<h2 id="目前实现的自定义配置">目前实现的自定义配置：</h2>
+<h2 id="简单但够用">简单但够用：</h2>
 <h3 id="顶部标语">顶部标语</h3>
-<p>可以设置主/副标语，将显示在每个页面的顶端</p>
-<h3 id="个人信息">个人信息</h3>
-<p>在这里填写作者名称</p>
+<p><amp-img alt="InlineAMP顶部标语设置"
+  src="https://i.loli.net/2020/03/18/Qa9JNCj2y8x3ebz.png"
+  width="1186"
+  height="793"
+  layout="responsive"><br>
+</amp-img><br>
+可以设置主/副标语，将显示在每个页面的顶端</p>
 <h3 id="友链">友链</h3>
-<p>目前仅能在侧边栏自定义友链</p>
+<p><amp-img alt="InlineAMP友链设置"
+  src="https://i.loli.net/2020/03/18/e3M1SzjdKPyfDLT.png"
+  width="1186"
+  height="793"
+  layout="responsive"><br>
+</amp-img><br>
+在侧边栏显示友链</p>
+<h3 id="disqus评论">Disqus评论</h3>
+<p><amp-img alt="InlineAMP评论设置"
+  src="https://i.loli.net/2020/03/18/5WbgXrvoBfjmtpl.png"
+  width="1186"
+  height="793"
+  layout="responsive"><br>
+</amp-img><br>
+支持Disqus评论</p>
+<h3 id="按需加载js">按需加载JS</h3>
+<p><amp-img alt="InlineAMP按需加载JS"
+  src="https://i.loli.net/2020/03/18/GjLah3yqucfBDop.png"
+  width="1186"
+  height="793"
+  layout="responsive"><br>
+</amp-img></p>
 <h3 id="google-analytics">Google Analytics</h3>
-<p>可以添加Google Analytics</p>
+<p><amp-img alt="InlineAMP Google Analytics设置"
+  src="https://i.loli.net/2020/03/18/mrSz7qdMAJiPNg3.png"
+  width="1186"
+  height="793"
+  layout="responsive"><br>
+</amp-img><br>
+可以添加Google Analytics</p>
 <h3 id="语言">语言</h3>
 <p>用于设置 html lang 属性，默认设置为简体中文(zh-Hans)，一般用默认设置即可</p>
-<h2 id="使用提示">使用提示</h2>
-<p>由于用了AMP技术，需要遵循<a href="https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/">AMP HTML规范</a> ，插入图片需要使用特殊的方式插入<br>
-实例：<br>
-<code>&lt;amp-img src=&quot;https://hhacker.com/wp-content/uploads/2020/02/022020_1310_1.jpg&quot; alt=&quot;&quot; width=&quot;521&quot; height=&quot;333&quot; class=&quot;amp-wp-enforced-sizes&quot; layout=&quot;intrinsic&quot;&gt;&lt;noscript&gt;&lt;img src=&quot;https://hhacker.com/wp-content/uploads/2020/02/022020_1310_1.jpg&quot; alt=&quot;&quot; width=&quot;521&quot; height=&quot;333&quot; class=&quot;&quot;&gt;&lt;/noscript&gt;&lt;/amp-img&gt;</code></p>
-<p>将里面的URL替换为你的图片地址<br>
-效果：<br>
-<amp-img src="https://hhacker.com/wp-content/uploads/2020/02/022020_1310_1.jpg" alt="" width="521" height="333" class="amp-wp-enforced-sizes" layout="intrinsic"><noscript><img src="https://hhacker.com/wp-content/uploads/2020/02/022020_1310_1.jpg" alt="" width="521" height="333" class=""></noscript></amp-img></p>
-<h2 id="已知的bug">已知的Bug</h2>
-<ul>
-<li>自定义域名会出现字体文件无法加载</li>
-<li>日期显示错误</li>
-</ul>
+<h2 id="使用指南">使用指南</h2>
+<p>插入图片、视频、音频<br>
+https://blog.ofo.moe/include-images-and-video/</p>
+<p>添加评论<br>
+https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/</p>
 <h2 id="待实现的功能">待实现的功能</h2>
 <ul>
-<li>搜索</li>
-<li>多级菜单</li>
-<li>评论功能</li>
 <li>点赞功能</li>
 <li>阅读量显示</li>
+<li>标签云页面</li>
+<li>自定义CSS</li>
 </ul>
 ]]></content>
     </entry>

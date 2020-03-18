@@ -7,14 +7,17 @@
 <meta name="description" content="念念不忘，必有回响" />
 <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
 <script async src="https://cdn.ampproject.org/v0.js"></script>
-<title>Gridea | Jiansing&#39;s blog</title>
+<title>Gridea Theme InlineAMP 如何嵌入图像，视频和音频 | Jiansing&#39;s blog</title>
 <style amp-custom>
   body{width:100vw;display:flex;flex-direction:column;font-family:"PT Serif",-apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif,serif;background:#fff}
 :focus{outline:0}
 @font-face{font-family:iconfont;src:url("https://blog.ofo.moe/media/fonts/iconfont.eot?raw=true") format("embedded-opentype"),url("https://blog.ofo.moe/media/fonts/iconfont.woff2?raw=true") format("woff2"),url("https://blog.ofo.moe/media/fonts/iconfont.woff?raw=true") format("woff"),url("https://blog.ofo.moe/media/fonts/iconfont.ttf?raw=true") format("truetype"),url("https://blog.ofo.moe/media/fonts/iconfont.svg") format("svg")}
 @font-face{font-family:"PT Serif";font-style:normal;font-weight:400;font-display:swap;src:local("PT Serif"),local("PTSerif-Regular"),url("https://blog.ofo.moe/media/fonts/ptserif.woff2?raw=true") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 .iconfont{font-family:iconfont;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-input[type=email],input[type=password],input[type=submit],input[type=text],input[type=url]{-webkit-appearance:none;border-radius:0}
+input[type=email],input[type=password],input[type=submit],input[type=text],input[type=url],textarea{-webkit-appearance:none;border-radius:0}
+.content p[class^=amp-wp]{margin-top:0;margin-bottom:0;padding:1vw;line-height:1}
+@media only screen and (max-width:640px){.content p[class^=amp-wp]{padding:3vw}
+}
 header{width:100vw;background:#222;display:flex;justify-content:center}
 .top-container{width:71.4286vw;height:100%}
 .title-menus-area{display:flex;width:100%;height:5.8095vw;justify-content:space-between}
@@ -81,56 +84,22 @@ to{overflow:hidden;max-height:0}
 }
 main{width:71.4286vw;display:flex;margin:0 auto;justify-content:space-between;padding-top:2.9762vw;position:relative}
 .main-container{width:48.2143vw}
-.list-box{width:100%;display:flex;flex-direction:column;margin-bottom:2.9762vw}
-.title-img{width:48.2143vw;height:17.8571vw;position:relative}
-.title-img amp-img.contain img{object-fit:cover;object-position:top;transition:all .5s}
-a.title-img:hover amp-img.contain img{object-fit:cover;transform:scale(1.08);-webkit-transform:scale(1.08);-moz-transform:scale(1.08)}
-.post-info{position:relative;padding-left:1.7857vw;padding-top:1.5119vw;padding-right:1.7857vw;padding-bottom:1.7857vw;width:48.2143vw;border:.0595vw solid #e6e6e6;box-sizing:border-box;display:flex;flex-direction:column}
 .post-cate{font-size:.9524vw;line-height:1.5476vw;color:#dbb302;text-decoration:none;margin-right:.9644vw;display:flex;align-items:center}
 .post-cate:before{display:flex;content:"";width:.0595vw;min-width:1px;height:.6548vw;background:#dbb302;margin-right:.9524vw}
 .post-cate:first-child:before{display:none}
-.post-title{font-size:1.3613vw;line-height:2.381vw;margin-top:.5952vw;margin-bottom:0;width:39.881vw;word-break:break-all}
-.post-title:after{display:flex;content:"";width:4.1667vw;height:.2976vw;background:#dbb302;margin-top:.7321vw}
-.post-title a{text-decoration:none;color:#000}
-.post-excerpt{margin-top:1.4286vw;margin-bottom:1.1905vw;font-size:.9524vw;line-height:1.6667vw;color:#8a8a8a;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;visibility:visible}
 .flex-box{display:flex;align-items:center}
 .meta-category{flex-wrap:wrap;padding-right:4.1667vw}
-.justify-between{justify-content:space-between}
-.read-more{display:flex;justify-content:center;align-items:center;font-size:.8333vw;line-height:.8333vw;text-decoration:none;min-width:9.1667vw;min-height:2.1429vw;box-sizing:border-box;padding-left:1.1905vw;padding-right:1.1905vw;padding-top:.7143vw;padding-bottom:.7143vw;color:#dbb302;border:.0595vw #dbb302 solid;transition:all .2s;text-transform:uppercase}
-.read-more:hover{background:#dbb302;color:#fff}
-.icon-ml-readmore{margin-left:.625vw;font-size:1.1905vw}
 .post-meta-box{margin-top:.7143vw;font-size:.8333vw}
 .post-meta{font-size:.8333vw;color:#1a1a1a;text-decoration:none;margin-left:1.4881vw;display:inline-flex;align-items:center}
 .icon-mr-postmeta{margin-right:.5952vw;font-size:1.4881vw}
 .post-meta .icon-like-sp{font-size:1.1905vw}
-.post-publish-date{width:4.1667vw;height:4.7619vw;background:#f6f6f7;position:absolute;right:1.2501vw;top:-.8333vw;flex-direction:column;justify-content:center;align-items:center}
-.post-publish-date .post-date{color:#dbb302;font-size:1.3095vw;line-height:2.2916vw;font-weight:700}
-.post-publish-date .post-month{color:#000;font-size:.8333vw;line-height:1.4583vw;text-transform:uppercase}
-.list-box:last-child{margin-bottom:2.381vw}
-.pagination .screen-reader-text{display:none}
-.nav-links{margin-top:2.9762vw;margin-bottom:2.9762vw;display:flex;justify-content:center;flex-wrap:wrap}
-.nav-links .page-numbers{min-width:2.1429vw;height:2.1429vw;border:.0595vw #dbb302 solid;color:#dbb302;font-size:1.0714vw;line-height:1.0714vw;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;margin-left:.4762vw;margin-right:.4762vw;margin-bottom:.4762vw;box-sizing:border-box}
-.nav-links .current,.nav-links a.page-numbers:hover{background:#dbb302;color:#fff}
 @media only screen and (max-width:640px){main{width:100%;flex-direction:column;align-items:center;padding-top:6.6667vw}
 .main-container{width:92vw}
-.title-img{width:92vw;height:34.1333vw}
-.post-info{width:92vw;padding:3.4667vw;border:.2667vw solid #e6e6e6}
-.post-publish-date{width:10.6667vw;height:12.1333vw;top:-2vw;right:2.8vw}
-.post-publish-date .post-date{font-size:3.4667vw;line-height:6.0667vw}
-.post-publish-date .post-month{font-size:2.1333vw;line-height:3.7333vw}
 .post-cate{font-size:3.4667vw;line-height:4.8vw;margin-right:2.2133vw}
 .post-cate:before{width:.1333vw;height:1.8933vw;margin-right:2.2vw}
-.post-title{margin-top:2.5333vw;margin-bottom:0;font-size:4.8vw;line-height:6.6667vw;width:74.4vw}
-.post-title:after{width:9.3333vw;height:.8vw;margin-top:2.2667vw}
-.post-excerpt{margin-top:3.3333vw;margin-bottom:3.3333vw;font-size:4vw;line-height:5.6vw}
-.read-more{font-size:2.4533vw;line-height:2.4533vw;min-width:26.4933vw;min-height:6.1333vw;padding-left:3.7333vw;padding-right:3.7333vw;padding-top:2vw;padding-bottom:2vw;border:.1333vw #dbb302 solid}
-.icon-ml-readmore{margin-left:1.3333vw;font-size:3.3333vw}
 .post-meta{font-size:2.1333vw;margin-left:3.2vw}
 .icon-mr-postmeta{margin-right:1.8667vw;font-size:3.4667vw}
 .post-meta .icon-like-sp{font-size:2.4vw}
-.list-box{margin-bottom:5.3333vw}
-.nav-links .page-numbers{min-width:8vw;height:8vw;border:.1333vw #dbb302 solid;font-size:4vw;line-height:4vw;margin-left:1.7733vw;margin-right:1.7733vw;margin-bottom:1.7733vw}
-.list-box:last-child{margin-bottom:5.3333vw}
 .meta-category{flex-wrap:wrap;padding-right:10.6667vw}
 }
 .sidebar{width:19.6429vw;min-height:29.7619vw}
@@ -144,13 +113,11 @@ a.title-img:hover amp-img.contain img{object-fit:cover;transform:scale(1.08);-we
 .widget_categories>ul>li.cat-item:before{content:"";font-family:iconfont;color:#dbb302;font-size:.9524vw;margin-right:.7143vw;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .widget_categories li.cat-item a{color:#000;text-decoration:none}
 .widget_categories ul{list-style:none}
-.widget_categories .screen-reader-text{display:none}
 .widget ul li{font-size:.9524vw;line-height:1.5476vw;margin-top:1.25vw;list-style:none;position:relative;padding-left:1.6667vw}
 .widget ul li:first-child{margin-top:0}
 .widget ul li a{color:#000;text-decoration:none}
 .widget ul li a:hover{color:#dbb302}
 .widget>ul>li:before{content:"";font-family:iconfont;color:#dbb302;font-size:.893vw;margin-right:.7143vw;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;position:absolute;left:0}
-.widget .screen-reader-text{display:none}
 .widget_search form{display:flex;position:relative;align-items:center}
 .widget_search{border-bottom:none;padding-bottom:0}
 .widget_search form input[type=text]{width:19.5833vw;height:2.6787vw;border:.0595vw #e6e6e6 solid;border-radius:.2381vw;padding-left:1.1905vw;padding-right:2.9762vw;font-size:.8333vw}
@@ -163,19 +130,18 @@ a.title-img:hover amp-img.contain img{object-fit:cover;transform:scale(1.08);-we
 .widget_profile .profile-avatar amp-img{border-radius:100%}
 .widget_profile .profile-content{font-size:.9524vw;padding:2.9762vw 1.6667vw 1.9048vw 1.6667vw;width:100%;box-sizing:border-box;word-break:break-word;line-height:1.8}
 .widget_profile .profile-content li{margin-top:.5952vw}
-.widget_profile ul{padding-left:.9524vw;margin-top:.5952vw;margin-bottom:.5952vw}
+.widget_profile ol,.widget_profile ul{padding-left:.9524vw;margin-top:.5952vw;margin-bottom:.5952vw}
 .widget_profile .profile-content p{margin-block-start:auto;margin-block-end:auto;margin-top:.5952vw}
 .widget_profile amp-img{max-width:100%;height:auto}
 .widget_profile a{font-size:.9524vw;color:#dbb302;text-decoration:none}
 .widget ul li a,.widget ul li span{color:#000}
-.widget ul li span.post-date{color:#888;font-style:italic}
 li.recentcomments{color:#888}
 @media only screen and (max-width:640px){.sidebar{width:92vw;margin-top:8vw}
 .widget_profile .profile-box{width:92vw;margin-top:12.5333vw;border:.2667vw #e6e6e6 solid}
 .widget_profile .profile-avatar{width:25.0667vw;height:25.0667vw;top:-12.5333vw}
 .widget_profile .profile-content{font-size:4vw;line-height:5.8667vw;padding:17.8667vw 8.0667vw 4.8267vw 8.0667vw}
 .widget_profile .profile-content li{font-size:4vw;line-height:5.8667vw;margin-top:1.3333vw;list-style:unset}
-.widget_profile ul{padding-left:2.1333vw;margin-top:1.3333vw;margin-bottom:1.3333vw}
+.widget_profile ol,.widget_profile ul{padding-left:2.1333vw;margin-top:1.3333vw;margin-bottom:1.3333vw}
 .widget_profile .profile-content p{margin-block-start:auto;margin-block-end:auto;margin-top:1.3333vw}
 .widget_profile amp-img{max-width:100%;height:auto}
 .widget_profile a{font-size:4vw;color:#dbb302;text-decoration:none}
@@ -221,252 +187,282 @@ footer{width:100vw;background:#222;display:flex;justify-content:center}
 .footer-container .footer-copyright p{margin-top:0}
 .footer-container .footer-copyright{margin-top:0;margin-bottom:0}
 }
+.content{word-break:break-word}
+h2.article-title{margin-top:1.3095vw;font-size:1.9048vw;line-height:2.8571vw;margin-bottom:1.9048vw}
+h2.article-title a{color:#000;text-decoration:none}
+.article-info .post-meta-box{margin-top:0}
+.article-info .post-meta:first-child{margin-left:0}
+.article-info .post-meta-box{margin-bottom:.9524vw}
+.content h1,.content h2,.content h3,.content h4{margin-top:1.7857vw;margin-bottom:1.7857vw}
+.content h1{font-size:1.6667vw}
+.content h2{font-size:1.5476vw}
+.content h3{font-size:1.4286vw}
+.content h4{font-size:1.3095vw}
+.content p{margin-top:2.0238vw;margin-bottom:2.0238vw;font-size:1.0714vw;line-height:1.9048vw;color:#666}
+.content ol,.content ul{padding-left:1.4881vw;font-size:1.0714vw;line-height:1.9048vw;margin-top:2.0238vw;margin-bottom:2.0238vw}
+.content a{color:#dbb302;text-decoration:none}
+.likes-form{text-align:center;margin-bottom:3.5714vw}
+.likes-button{width:4.7619vw;height:4.7619vw;border-radius:100%;border:.0595vw solid #c4c4c4;background:#fff;color:#1a1a1a;font-size:.8333vw;display:inline-flex;flex-direction:column;justify-content:center;align-items:center}
+.likes-button:hover{color:#dbb302}
+.likes-button:before{content:"";font-family:iconfont;font-size:1.9048vw;margin-bottom:.3571vw;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.post-nav{display:flex;justify-content:space-between;margin-bottom:4.5238vw}
+.post-nav .nav-next a,.post-nav .nav-previous a{color:#c5c5c5;font-size:1.0714vw;text-decoration:none;font-weight:700;display:inline-flex}
+.post-nav a.post-nav-link-active{color:#000}
+.post-nav a.post-nav-link-active:hover{color:#dbb302}
+.post-nav .nav-previous a:before{content:"";font-family:iconfont;font-size:1.5476vw;margin-right:.875vw;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.post-nav .nav-next a:after{content:"";font-family:iconfont;font-size:1.5476vw;margin-left:.875vw;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.social-share{display:flex;max-width:100%}
+.social-share-box{width:2.9762vw;height:2.9762vw;margin-right:1.7857vw}
+amp-social-share.rounded{display:flex;border-radius:50%;background-size:60%;color:#fff;background-color:#000}
+amp-social-share.rounded:hover{background-color:#dbb302}
+.post-tags{display:flex;margin-top:1.9644vw}
+.post-tags a{display:inline-flex;background:#f2f2f2;padding-left:1.3393vw;padding-right:1.3393vw;padding-top:.6548vw;padding-bottom:.6548vw;margin-right:.3571vw;color:#666;font-size:.8333vw;line-height:.8333vw;text-decoration:none;text-transform:uppercase}
+#comments{margin-top:4.7619vw}
+.comments>h2{text-align:center;margin-bottom:3.5714vw;font-size:1.0714vw;line-height:1.0714vw;text-transform:uppercase}
+.comments>ul{list-style:none;padding-left:.9524vw;margin-top:0;margin-bottom:1.7857vw}
+.comment-respond .comment-reply-title{font-size:1.0714vw;text-transform:uppercase}
+.comment-respond .comment-reply-title>small{text-transform:uppercase;float:right}
+.comment-form{font-size:0}
+.comment-form>.form-submit{margin-bottom:4.7619vw}
+.comment-form .comment-error{color:red;font-size:1.0714vw;margin-bottom:.2976vw}
+.comment-form-comment .comment-content{width:48.2143vw;height:11.9048vw;resize:none;border:.0595vw #e6e6e6 solid;padding:1.1905vw 1.3095vw 1.1905vw 1.3095vw;font-size:1.0952vw;line-height:1.0952vw;box-sizing:border-box}
+.comment-form-comment .comment-content::placeholder{font-size:1.0952vw;line-height:1.0952vw}
+.comment-form>.form-submit>.submit{border:.0595vw solid #dbb302;text-transform:uppercase;color:#dbb302;font-size:1.0952vw;line-height:1.0952vw;background:#fff;box-sizing:border-box;padding:.9644vw 1.5059vw .9644vw 1.5059vw;cursor:pointer}
+.comment-form>.form-submit>.submit:hover{background:#dbb302;color:#fff}
+.comment-form-author{margin-right:1.3095vw}
+.comment-form-author,.comment-form-email,.comment-form-url{display:inline-flex}
+.comment-form-author input,.comment-form-email input,.comment-form-url input{width:23.4524vw;height:3.4524vw;border:.0595vw solid #e6e6e6;padding:1.369vw;font-size:.9524vw;line-height:.9524vw;color:#333;box-sizing:border-box}
+.comment-form-url input{width:48.2143vw}
+@media only screen and (max-width:640px){.likes-form{margin-bottom:8vw}
+h2.article-title{margin-top:5.3333vw;font-size:5.0667vw;line-height:6.9334vw;margin-bottom:5.3333vw}
+.article-info .post-meta-box{margin-bottom:0}
+.content h1,.content h2,.content h3,.content h4{margin-top:5.3333vw;margin-bottom:5.3333vw}
+.content h1{font-size:5.6vw}
+.content h2{font-size:5.3333vw}
+.content h3{font-size:5.0667vw}
+.content h4{font-size:4.8vw}
+.content p{margin-top:4.5333vw;margin-bottom:4.5333vw;font-size:4vw;line-height:5.8667vw}
+.content ol,.content ul{padding-left:3.3333vw;font-size:4vw;line-height:5.8667vw;margin-top:5.3333vw;margin-bottom:5.3333vw}
+.likes-button{width:16vw;height:16vw;border:.1333vw solid #c4c4c4;font-size:2.6667vw;margin-top:2.6667vw}
+.likes-button:before{font-size:5.6vw;margin-bottom:1.8667vw}
+.post-nav{margin-bottom:12.6667vw}
+.post-nav .nav-next a,.post-nav .nav-previous a{font-size:3.7333vw}
+.social-share-box{width:6.6667vw;height:6.6667vw;margin-right:4vw}
+.post-tags{margin-top:8.8vw}
+.post-tags a{padding-left:3.5333vw;padding-right:3.5333vw;padding-top:1.7333vw;padding-bottom:1.7333vw;margin-right:1.3333vw;font-size:2.2vw;line-height:2.2vw}
+#comments>ul{padding-left:0}
+.comment-respond .comment-reply-title,.comments>h2{font-size:3.7333vw}
+.comment-form-comment .comment-content{width:92vw;height:26.6667vw;border:.1333vw #e6e6e6 solid;padding:4vw 3.3333vw 4vw 3.3333vw;font-size:3.4667vw;line-height:3.4667vw}
+.comment-form-comment .comment-content::placeholder{font-size:3.4667vw;line-height:3.4667vw}
+.comment-form>.form-submit>.submit{border:.1333vw solid #dbb302;font-size:3.2vw;line-height:3.2vw;padding:2.8133vw 4.4vw 2.8133vw 4.4vw;cursor:pointer}
+.comment-form .comment-error{font-size:3.4667vw}
+.comment-form-author input,.comment-form-email input,.comment-form-url input{width:92vw;height:10.6667vw;border:.1333vw solid #e6e6e6;padding:2.5333vw;font-size:3.4667vw;line-height:3.4667vw}
+.post-nav .nav-previous a:before{font-size:5.3333vw;margin-right:2.8vw}
+.post-nav .nav-next a:after{font-size:5.3333vw;margin-left:2.8vw}
+#comments{margin-top:12vw}
+}
+:root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-224b51a{display:none}
 :root:not(#_):not(#_):not(#_):not(#_):not(#_) .amp-wp-681d4ff{text-align:center;margin-top:.5vw}
 
 </style>
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-<link rel="canonical" href="https://blog.ofo.moe" />
+<link rel="canonical" href="https://blog.ofo.moe/include-images-and-video/" />
 <link rel="shortcut icon" href="https://blog.ofo.moe/favicon.ico?v=1584542494343">
 <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
 <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
-<link rel="alternate" type="application/atom+xml" title="Gridea | Jiansing&#39;s blog - Atom Feed" href="https://blog.ofo.moe/atom.xml">
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+
+<link rel="alternate" type="application/atom+xml" title="Gridea Theme InlineAMP 如何嵌入图像，视频和音频 | Jiansing&#39;s blog - Atom Feed" href="https://blog.ofo.moe/atom.xml">
+
+  
+    
+  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+  
+  
+  
 
 
 </head>
 
-
-<body class="home blog">
+<body>
   <input type="checkbox" id="header-menu-button">
   <header id="commonTop">
-    <div class="top-container">
-      <div class="title-menus-area">
-        <a class="blog-title" href="https://blog.ofo.moe">Jiansing&#39;s blog</a>
-        <label for="header-menu-button" class="top-menus">
-          <nav class="menu-menu-1-container">
-            <ul id="menu-menu-1" class="menu">
-              
-              
-              <li>
-                <a href="/" aria-current="page">首页</a></li>
-              
-              
-              
-              <li>
-                <a href="/archives" aria-current="page">归档</a></li>
-              
-              
-              
-              <li>
-                <a href="/about" aria-current="page">关于</a></li>
-              
-              
-            </ul>
-          </nav>
-        </label>
-      </div>
-      <div class="tagline">
-        <div class="tagline-main">分类：Gridea</div>
-      </div>
+  <div class="top-container">
+    <div class="title-menus-area">
+      <a class="blog-title" href="https://blog.ofo.moe">Jiansing&#39;s blog</a>
+      <label for="header-menu-button" class="top-menus">
+        <nav class="menu-menu-1-container">
+          <ul id="menu-menu-1" class="menu">
+            
+            
+            <li>
+              <a href="/" aria-current="page">首页</a></li>
+            
+            
+            
+            <li>
+              <a href="/archives" aria-current="page">归档</a></li>
+            
+            
+            
+            <li>
+              <a href="/about" aria-current="page">关于</a></li>
+            
+            
+          </ul>
+        </nav>
+      </label>
     </div>
-  </header>
-
+    
+    <div class="tagline">
+      <div class="tagline-main">念念不忘，必有回响</div>
+      <div class="tagline-sub">Jiansing的自留地</div>
+    </div>
+    
+  </div>
+</header>
   <main>
     <div class="main-container">
-  <div class="post-list">
-    
-    <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-      
-      <a href="https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/" class="title-img">
-        <amp-img class="contain" src="https://blog.ofo.moe/post-images/add-comment-for-gridea-theme-inlineamp.jpg" layout="fill" alt="Gridea Theme InlineAMP如何添加评论"></amp-img>
-      </a>
-      
 
-      <div class="post-info">
+      <div class="article-info">
         
-        <div class="flex-box meta-category">
-          <a class="post-cate" href="https://blog.ofo.moe/tag/comment/">Comment</a></div>
-        
-        <h2 class="post-title">
-          <a href="https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/">Gridea Theme InlineAMP如何添加评论</a>
+        <h2 class="article-title">
+          <a href="https://blog.ofo.moe/include-images-and-video/">Gridea Theme InlineAMP 如何嵌入图像，视频和音频</a>
         </h2>
-        <div class="post-excerpt">
-          <p>AMP已经提供了对评论的完整支持：<br>
-https://amp.dev/documentation/guides-and-tutorials/develop/login_requiring/add_comment/</p>
-
-        </div>
-        <div class="flex-box justify-between">
-          <a href="https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
+        <div class="flex-box">
           <div class="flex-box post-meta-box">
-            <a class="post-meta" href="https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/#comments"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/"><span
-                class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
+            <a class="post-meta" href="https://blog.ofo.moe"><span
+                class="iconfont icon-mr-postmeta"></span>Jiansing</a>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>2020-03-17</span>
           </div>
-          
-
-          <div class="flex-box post-publish-date">
-            
-            <div class="post-date">
-              2020</div>
-            
-            <div class="post-date">
-              2018</div>
-            
-          </div>
-
         </div>
-
       </div>
-    </article>
-    
-    <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-      
-
-      <div class="post-info">
-        
-        <div class="flex-box meta-category">
-          <a class="post-cate" href="https://blog.ofo.moe/tag/video/">video</a></div>
-        
-        <h2 class="post-title">
-          <a href="https://blog.ofo.moe/add-video-for-gridea-theme-inlineamp/">Gridea Theme InlineAMP 如何嵌入B站视频</a>
-        </h2>
-        <div class="post-excerpt">
-          <p><amp-video controls
+      <div class="content">
+        <p><amp-audio src="https://storage.googleapis.com/media-session/sintel/snow-fight.mp3"
+  artwork="https://storage.googleapis.com/media-session/sintel/artwork-512.png"
+  title="Snow Fight"
+  album="Jan Morgenstern"
+  artist="Sintel"
+  height="50"
+  width="auto"
+  controls><br>
+</amp-audio></p>
+<p>Gridea Theme InlineAMP是一款纯AMP主题，若使用Gridea自带的Markdown编辑器插入图片可能出现排版错位的情况。</p>
+<h2 id="为什么会这样">为什么会这样</h2>
+<!-- more -->
+<p>Gridea将Markdown转化为普通的HTML 网页，而AMP网页需要遵循另外一套<a href="https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/">规范</a>。</p>
+<h2 id="有什么解决方法">有什么解决方法？</h2>
+<p>最简单的方法：如果你只是偶尔在文章里配几张图片，直接插入规范的amp-img标签即可。AMP项目官网给出了使用方法：<br>
+https://amp.dev/zh_cn/documentation/guides-and-tutorials/develop/media_iframes_3p/</p>
+<h2 id="例子">例子</h2>
+<p>在这里我引用了一张<a href="https://visualhunt.com/photo2/612/glaciers-melting-in-polar-climate/">visualhunt</a>上的图片，直接在Gridea的编辑器中输入：</p>
+<p><code>&lt;amp-img alt=&quot;这是一个例子&quot; src=&quot;https://visualhunt.com/photos/1/glaciers-melting-in-polar-climate.jpg?s=l&quot; width=&quot;3000&quot; height=&quot;1987&quot; layout=&quot;responsive&quot;&gt; &lt;/amp-img&gt;</code></p>
+<p>将URL替换为你的图片地址；此外你还需要给每张图片设置尺寸，没有特别需要的话直接填上原图片的宽和高就可以了，图片是自适应的。</p>
+<p>效果：<br>
+<amp-img alt="这是一个例子"
+  src="https://visualhunt.com/photos/1/glaciers-melting-in-polar-climate.jpg?s=l"
+  width="3000"
+  height="1987"
+  layout="responsive"><br>
+</amp-img></p>
+<h2 id="其他方法">其他方法：</h2>
+<p>Github上有将markdown转换为AMP HTML的工具：<br>
+https://github.com/search?q=markdown+to+AMP</p>
+<h2 id="插入视频和音频">插入视频和音频</h2>
+<p>插入视频</p>
+<p><code>&lt;amp-video controls width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://amp.dev/static/inline-examples/videos/kitten-playing.mp4&quot; poster=&quot;https://amp.dev/static/inline-examples/images/kitten-playing.png&quot;&gt; &lt;/amp-video&gt;</code></p>
+<p>效果:<br>
+<amp-video controls
   width="640"
   height="360"
   src="https://amp.dev/static/inline-examples/videos/kitten-playing.mp4"
   poster="https://amp.dev/static/inline-examples/images/kitten-playing.png"><br>
 </amp-video></p>
-
-        </div>
-        <div class="flex-box justify-between">
-          <a href="https://blog.ofo.moe/add-video-for-gridea-theme-inlineamp/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-          <div class="flex-box post-meta-box">
-            <a class="post-meta" href="https://blog.ofo.moe/add-video-for-gridea-theme-inlineamp/#comments"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://blog.ofo.moe/add-video-for-gridea-theme-inlineamp/"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://blog.ofo.moe/add-video-for-gridea-theme-inlineamp/"><span
-                class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-          </div>
-          
-
-          <div class="flex-box post-publish-date">
-            
-            <div class="post-date">
-              2020</div>
-            
-            <div class="post-date">
-              2018</div>
-            
-          </div>
-
-        </div>
+<p>插入音频</p>
+<p><code>&lt;amp-audio src=&quot;https://storage.googleapis.com/media-session/sintel/snow-fight.mp3&quot; artwork=&quot;https://storage.googleapis.com/media-session/sintel/artwork-512.png&quot; title=&quot;Snow Fight&quot; album=&quot;Jan Morgenstern&quot; artist=&quot;Sintel&quot; height=&quot;50&quot; width=&quot;auto&quot; controls&gt; &lt;/amp-audio&gt;</code></p>
+<p>效果:<br>
+<amp-audio src="https://storage.googleapis.com/media-session/sintel/snow-fight.mp3"
+  artwork="https://storage.googleapis.com/media-session/sintel/artwork-512.png"
+  title="Snow Fight"
+  album="Jan Morgenstern"
+  artist="Sintel"
+  height="50"
+  width="auto"
+  controls><br>
+</amp-audio></p>
 
       </div>
-    </article>
-    
-    <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-      
-      <a href="https://blog.ofo.moe/gridea-theme-inlineamp/" class="title-img">
-        <amp-img class="contain" src="https://blog.ofo.moe/post-images/gridea-theme-inlineamp.png" layout="fill" alt="Gridea Theme InlineAMP (v1.1.0)"></amp-img>
-      </a>
-      
 
-      <div class="post-info">
+      
+      <nav class="post-nav">
         
-        <div class="flex-box meta-category">
-          <a class="post-cate" href="https://blog.ofo.moe/tag/amp/">AMP</a></div>
-        
-        <h2 class="post-title">
-          <a href="https://blog.ofo.moe/gridea-theme-inlineamp/">Gridea Theme InlineAMP (v1.1.0)</a>
-        </h2>
-        <div class="post-excerpt">
-          <p>InlineAMP 是一款纯<a href="https://amp.dev/">AMP</a>主题，设计上简约、干净、响应式，适合喜欢极简设计、比较在意页面打开速度的博主使用。</p>
-
+        <div class="nav-previous">
+          <a class="post-nav-link-active" title="Gridea Theme InlineAMP 如何嵌入B站视频" href="https://blog.ofo.moe/add-video-for-gridea-theme-inlineamp/">上一篇文章</a>
         </div>
-        <div class="flex-box justify-between">
-          <a href="https://blog.ofo.moe/gridea-theme-inlineamp/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-          <div class="flex-box post-meta-box">
-            <a class="post-meta" href="https://blog.ofo.moe/gridea-theme-inlineamp/#comments"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://blog.ofo.moe/gridea-theme-inlineamp/"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://blog.ofo.moe/gridea-theme-inlineamp/"><span
-                class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-          </div>
+        
+        
+        <div class="nav-next">
+          <a class="post-nav-link-active" title="Gridea Theme InlineAMP (v1.1.0)" href="https://blog.ofo.moe/gridea-theme-inlineamp/">下一篇文章</a>
           
 
-          <div class="flex-box post-publish-date">
-            
-            <div class="post-date">
-              2020</div>
-            
-            <div class="post-date">
-              2018</div>
-            
-          </div>
-
         </div>
-
-      </div>
-    </article>
-    
-    <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
-      
-      <a href="https://blog.ofo.moe/hello-gridea/" class="title-img">
-        <amp-img class="contain" src="https://blog.ofo.moe/post-images/hello-gridea.jpg" layout="fill" alt="Hello Gridea"></amp-img>
-      </a>
+      </nav>
       
 
-      <div class="post-info">
-        
-        <div class="flex-box meta-category">
-          <a class="post-cate" href="https://blog.ofo.moe/tag/qR-CzOzA6/">Gridea</a></div>
-        
-        <h2 class="post-title">
-          <a href="https://blog.ofo.moe/hello-gridea/">Hello Gridea</a>
-        </h2>
-        <div class="post-excerpt">
-          <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-
-        </div>
-        <div class="flex-box justify-between">
-          <a href="https://blog.ofo.moe/hello-gridea/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
-          <div class="flex-box post-meta-box">
-            <a class="post-meta" href="https://blog.ofo.moe/hello-gridea/#comments"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://blog.ofo.moe/hello-gridea/"><span class="iconfont icon-mr-postmeta"></span></a>
-            <a class="post-meta" href="https://blog.ofo.moe/hello-gridea/"><span
-                class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
-          </div>
-          
-
-          <div class="flex-box post-publish-date">
-            
-            <div class="post-date">
-              2020</div>
-            
-            <div class="post-date">
-              2018</div>
-            
-          </div>
-
-        </div>
-
-      </div>
-    </article>
-    
-
+      
+      <div class="social-share">
+  <div class="social-share-box">
+    <amp-social-share class="rounded" type="email" layout="responsive" width="20" height="20"></amp-social-share>
   </div>
-  <div>
-    <nav class="navigation pagination" role="navigation" aria-label="文章">
-      <h2 class="screen-reader-text">文章导航</h2>
-      <div class="nav-links">
-        
-        
-      </div>
-    </nav>
+  <div class="social-share-box">
+    <amp-social-share class="rounded" type="linkedin" layout="responsive" width="20" height="20">
+    </amp-social-share>
+  </div>
+  <div class="social-share-box">
+    <amp-social-share class="rounded" type="pinterest" layout="responsive"
+      data-param-media="https://amp.dev/static/samples/img/amp.jpg" width="20" height="20"></amp-social-share>
+  </div>
+  <div class="social-share-box">
+    <amp-social-share class="rounded" type="tumblr" layout="responsive" width="20" height="20"></amp-social-share>
+  </div>
+  <div class="social-share-box">
+    <amp-social-share class="rounded" type="twitter" layout="responsive" width="20" height="20">
+    </amp-social-share>
+  </div>
+  <div class="social-share-box">
+    <amp-social-share class="rounded" type="whatsapp" layout="responsive" width="20" height="20">
+    </amp-social-share>
+  </div>
+  <div class="social-share-box">
+    <amp-social-share class="rounded" type="line" layout="responsive" width="20" height="20"></amp-social-share>
   </div>
 </div>
+      
+
+
+      
+
+      
+        
+          <div id="comments" class="comments content">
+  <div id="respond" class="comment-respond">
+    <amp-iframe width=600 height=140 layout="responsive"
+      sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms" resizable
+      src="https://gate.ofo.moe/static/disqus.html#https://blog.ofo.moe/include-images-and-video/">
+      <div overflow tabindex=0 role=button aria-label="Load more"
+        style="display:block;font-size:12px;font-weight:500;font-family:Helvetica Neue, arial, sans-serif;text-align:center;line-height:1.1;padding:12px 16px;border-radius:4px;background:rgba(29,47,58,0.6);color:rgb(255,255,255)">
+        Load more
+      </div>
+    </amp-iframe>
+
+  </div>
+</div>
+          
+      
+    </div>
+
     <div class="sidebar">
   <aside id="profile-2" class="widget widget_profile">
     <div class="profile-box">
@@ -494,137 +490,10 @@ https://amp.dev/documentation/guides-and-tutorials/develop/login_requiring/add_c
       </form>
     </aside>
     
+
   <aside id="categories-2" class="widget widget_categories">
     <h4 class="widget-title">分类目录</h4>
     <ul>
-      
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/comment/">
-          Comment
-          
-          
-          
-        </a>
-      </li>
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/amp/">
-          AMP
-          
-          
-          
-        </a>
-      </li>
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/gridea-theme/">
-          Gridea Theme
-          
-          
-          
-        </a>
-      </li>
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/inlineamp/">
-          InlineAMP
-          
-          
-          
-        </a>
-      </li>
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/qR-CzOzA6/">
-          Gridea
-          
-        </a>
-      </li>
-      
-      
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/video/">
-          video
-          
-          
-          
-        </a>
-      </li>
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/bilibili/">
-          Bilibili
-          
-          
-          
-        </a>
-      </li>
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/amp/">
-          AMP
-          
-          
-          
-        </a>
-      </li>
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/gridea-theme/">
-          Gridea Theme
-          
-          
-          
-        </a>
-      </li>
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/inlineamp/">
-          InlineAMP
-          
-          
-          
-        </a>
-      </li>
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/qR-CzOzA6/">
-          Gridea
-          
-        </a>
-      </li>
-      
-      
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/amp/">
-          AMP
-          
-          
-          
-        </a>
-      </li>
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/gridea-theme/">
-          Gridea Theme
-          
-          
-          
-        </a>
-      </li>
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/inlineamp/">
-          InlineAMP
-          
-          
-          
-        </a>
-      </li>
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/qR-CzOzA6/">
-          Gridea
-          
-        </a>
-      </li>
-      
-      
-      
-      <li class="cat-item"><a href="https://blog.ofo.moe/tag/qR-CzOzA6/">
-          Gridea
-          
-        </a>
-      </li>
-      
       
 
     </ul>
@@ -651,10 +520,7 @@ https://amp.dev/documentation/guides-and-tutorials/develop/login_requiring/add_c
     <span class="iconfont"></span>
   </span>
 </div>
-
-    
   </main>
-
   <footer>
   <div class="footer-container">
     <div class="footer-menus">
@@ -674,7 +540,7 @@ https://amp.dev/documentation/guides-and-tutorials/develop/login_requiring/add_c
   </div>
 </footer>
 
-
+  
 </body>
 
 </html>
