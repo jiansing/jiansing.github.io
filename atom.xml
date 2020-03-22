@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ofo.moe</id>
     <title>Jiansing&apos;s blog</title>
-    <updated>2020-03-22T10:49:47.723Z</updated>
+    <updated>2020-03-22T11:38:16.076Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ofo.moe"/>
     <link rel="self" href="https://blog.ofo.moe/atom.xml"/>
@@ -150,7 +150,7 @@ https://github.com/search?q=markdown+to+AMP</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Gridea Theme InlineAMP (v1.1.0)]]></title>
+        <title type="html"><![CDATA[Gridea Theme InlineAMP (v1.2.0-beta.0)]]></title>
         <id>https://blog.ofo.moe/gridea-theme-inlineamp/</id>
         <link href="https://blog.ofo.moe/gridea-theme-inlineamp/">
         </link>
@@ -160,13 +160,23 @@ https://github.com/search?q=markdown+to+AMP</p>
         <content type="html"><![CDATA[<p>InlineAMP 是一款纯<a href="https://amp.dev/">AMP</a>主题，设计上简约、干净、响应式，适合喜欢极简设计、比较在意页面打开速度的博主使用。</p>
 <!-- more -->
 <p>仓库下载：https://github.com/jiansing/gridea-theme-inlineamp</p>
+<h2 id="v120-beta0-updated-2020316">v1.2.0-beta.0 updated 2020.３.16</h2>
+<ol>
+<li>添加AddThis分享组件</li>
+<li>添加Facebook评论</li>
+<li>添加百度统计</li>
+<li>添加自定义AMP JS</li>
+<li>字体改为CDN加载</li>
+</ol>
 <h2 id="v03-updated-2020316">v0.3 updated 2020.３.16</h2>
-<p>新增Disqus评论支持<br>
-新增Google站内搜索<br>
-顶部标语可以自定义是否展示<br>
-可以按需加载JS<br>
-修复了多条友链显示不正常的Bug<br>
-修复了文章页不显示分类目录(即标签)的Bug</p>
+<ol>
+<li>新增Disqus评论支持</li>
+<li>新增Google站内搜索</li>
+<li>顶部标语可以自定义是否展示</li>
+<li>可以按需加载JS</li>
+<li>修复了多条友链显示不正常的Bug</li>
+<li>修复了文章页不显示分类目录(即标签)的Bug</li>
+</ol>
 <p>移植于wordpress的同名主题 InlineAMP 。（<a href="https://github.com/justid/InlineAMP">原主题Github</a>）</p>
 <h2 id="继承了原主题的一些特点">继承了原主题的一些特点：</h2>
 <ul>
