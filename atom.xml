@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ofo.moe</id>
     <title>Jiansing&apos;s blog</title>
-    <updated>2020-03-18T14:45:54.798Z</updated>
+    <updated>2020-03-22T10:14:22.591Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ofo.moe"/>
     <link rel="self" href="https://blog.ofo.moe/atom.xml"/>
@@ -262,8 +262,9 @@ https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/</p>
 <p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
 <p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
 <p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+<p>尽情发挥你的才华吧！<br>
+<amp-iframe width="200" height="100" sandbox="allow-scripts allow-same-origin" layout="responsive" frameborder="0" src="https://music.163.com/outchain/player?type=2&id=29732992"></amp-iframe><br>
+😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
