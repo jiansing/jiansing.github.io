@@ -1,0 +1,307 @@
+{
+  "name": "InlineAMP",
+  "version": "1.3.0-alpha.1",
+  "author": "Jiansing",
+  "repository": "https://github.com/jiansing/gridea-theme-inlineamp",
+  "customConfig": [
+    {
+      "name": "tagline",
+      "label": "顶部标语",
+      "group": "顶部标语区域",
+      "value": true,
+      "type": "switch",
+      "note": "顶部标语将展示在每个页面顶部"
+    },
+    {
+      "name": "taglinemain",
+      "label": "主标语",
+      "group": "顶部标语区域",
+      "value": "",
+      "type": "input",
+      "note": "将展示在每个页面顶部"
+    },
+    {
+      "name": "taglinesub",
+      "label": "副标语",
+      "group": "顶部标语区域",
+      "value": "",
+      "type": "input",
+      "note": "将展示在每个页面顶部"
+    },
+    {
+      "name": "avatar",
+      "label": "作者",
+      "group": "社会化分享",
+      "value": "作者",
+      "type": "input",
+      "note": "要怎么称呼您?"
+    },
+    {
+      "name": "socialshare",
+      "label": "分享组件",
+      "group": "社会化分享",
+      "value": "ampshare",
+      "type": "select",
+      "note": "使用 AddThis 分享请前往：https://www.addthis.com ，获取 AddThis 相关属性见：https://amp.dev/zh_cn/documentation/components/amp-addthis/",
+      "options": [
+        {
+          "label": "无",
+          "value": "noshare"
+        },
+        {
+          "label": "amp-social-share",
+          "value": "ampshare"
+        },
+        {
+          "label": "AddThis 分享",
+          "value": "addthis"
+        }
+      ]
+    },
+    {
+      "name": "addthisdatapubid",
+      "label": "AddThis 发布商 ID",
+      "group": "社会化分享",
+      "value": "",
+      "type": "input",
+      "note": "用户登录后，AddThis 信息中心的网址中包含的 AddThis 发布商 ID。例如，在网址 https://www.addthis.com/dashboard#gallery/pub/ra-5c191331410932ff 中， ra-5c191331410932ff 为发布商 ID"
+    },
+    {
+      "name": "addthisdatawidgetid",
+      "label": "AddThis 微件 ID",
+      "group": "社会化分享",
+      "value": "",
+      "type": "input",
+      "note": "要显示的工具对应的 AddThis 微件 ID。同样，也可在 AddThis 信息中心找到该 ID。您可以通过以下方式找到特定工具的微件 ID：在 AddThis 信息中心打开特定工具，然后复制网址的最后一部分。例如，在网址 https://www.addthis.com/dashboard#tool-config/pub/ra-5c191331410932ff/widgetId/957l 中， 957l 为微件 ID。"
+    },
+    {
+      "name": "addthisdatawidgettype",
+      "label": "AddThis 微件类型",
+      "group": "社会化分享",
+      "value": "inline",
+      "type": "select",
+      "note": "注意与上面填写的微件 ID 一一对应",
+      "options": [
+        {
+          "label": "悬浮",
+          "value": "floating"
+        },
+        {
+          "label": "内嵌",
+          "value": "inline"
+        },
+        {
+          "label": "手动内嵌",
+          "value": "inline2"
+        },
+        {
+          "label": "全局悬浮",
+          "value": "globalfloating"
+        }
+      ]
+    },
+    {
+      "name": "comments",
+      "label": "评论系统",
+      "group": "评论",
+      "value": "disqus",
+      "type": "select",
+      "note": "配置 Disqus 见：https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/",
+      "options": [
+        {
+          "label": "utterances 评论（实验性）",
+          "value": "utterances"
+        },
+        {
+          "label": "Disqus",
+          "value": "disqus"
+        },
+        {
+          "label": "Facebook 评论",
+          "value": "facebookcomments"
+        }
+      ]
+    },
+    {
+      "name": "disqusurl",
+      "label": "Disqus 代码 URL",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "该文件不能与 blog 使用同一域名（可以使用不同的子域名如 cdn.example.com）"
+    },
+    {
+      "name": "count",
+      "label": "评论计数",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "如果需要显示文章评论数请开启"
+    },
+    {
+      "name": "disqusdomain",
+      "label": "Disqus 子域",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "如开启评论计数请填写"
+    },
+    {
+      "name": "utterancesurl",
+      "label": "utterances 代码 URL（实验性）",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "该文件不能与 blog 使用同一域名（可以使用不同的子域名如 cdn.example.com）"
+    },
+    {
+      "name": "facebookcommentslanguage",
+      "label": "Facebook 评论系统语言",
+      "group": "评论",
+      "value": "zh_CN",
+      "type": "input",
+      "note": "（可选）"
+    },
+    {
+      "name": "facebookcommentsnumposts",
+      "label": "Facebook 评论默认显示出的评论数量",
+      "group": "评论",
+      "value": "",
+      "type": "input",
+      "note": "（可选，需为整数）"
+    },
+    {
+      "name": "facebookcommentscolorscheme",
+      "label": "Facebook 评论暗黑模式",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "（可选）"
+    },
+    {
+      "name": "facebookcommentstime",
+      "label": "Facebook 评论按时间顺序排序",
+      "group": "评论",
+      "value": false,
+      "type": "switch",
+      "note": "（可选，默认按最受欢迎的顺序排列）"
+    },
+    {
+      "name": "friends",
+      "label": "友链",
+      "group": "友链",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" }
+      ],
+      "note": "将显示在侧边栏"
+    },
+    {
+      "name": "tag",
+      "label": "标签",
+      "group": "侧边栏",
+      "value": true,
+      "type": "switch",
+      "note": "侧边栏显示所有标签"
+    },
+    {
+      "name": "search",
+      "label": "Google站内搜索",
+      "group": "侧边栏",
+      "value": true,
+      "type": "switch",
+      "note": "侧边栏 Google 搜索小部件"
+    },
+    {
+      "name": "latestarticles",
+      "label": "最近文章",
+      "group": "侧边栏",
+      "value": true,
+      "type": "switch",
+      "note": "显示最近文章"
+    },
+    {
+      "name": "metaDescription",
+      "label": "站点描述",
+      "group": "SEO",
+      "value": "",
+      "type": "input",
+      "note": "站点描述"
+    },
+    {
+      "name": "siteImage",
+      "label": "在 Twitter 等社交平台分享链接时将显示此预览图（文章页优先显示封面图），例：https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards",
+      "group": "SEO",
+      "value": "",
+      "type": "picture-upload",
+      "note": ""
+    },
+    {
+      "name": "analytics",
+      "label": "开启",
+      "group": "统计",
+      "value": false,
+      "type": "switch",
+      "note": ""
+    },
+    {
+      "name": "ga",
+      "label": "Google Analytics 跟踪 ID",
+      "group": "统计",
+      "value": "",
+      "type": "input",
+      "note": "UA-xxxxxxxxx-x"
+    },
+    {
+      "name": "ba",
+      "label": "百度统计 token",
+      "group": "统计",
+      "value": "",
+      "type": "input",
+      "note": ""
+    },
+    {
+      "name": "video",
+      "label": "HTML5 amp-video 标签支持",
+      "group": "其他",
+      "value": true,
+      "type": "switch",
+      "note": "如果需要嵌入视频请开启"
+    },
+    {
+      "name": "audio",
+      "label": "HTML5 amp-audio 标签支持",
+      "group": "其他",
+      "value": true,
+      "type": "switch",
+      "note": "如果需要嵌入音频请开启"
+    },
+    {
+      "name": "gist",
+      "label": "HTML5 amp-gist 标签支持",
+      "group": "其他",
+      "value": true,
+      "type": "switch",
+      "note": "如果需要使用 GitHub Gist 代码高亮请开启"
+    },
+    {
+      "name": "ampjs",
+      "label": "自定义 AMP JS",
+      "group": "其他",
+      "value": "",
+      "type": "input",
+      "note": "如需要嵌入第三方内容请在这里填写所需的 AMP JS，AMP 组件库：https://amp.dev/zh_cn/documentation/components/"
+    },
+    {
+      "name": "lang",
+      "label": "<html> lang 属性，默认设置为简体中文(zh-Hans)",
+      "group": "其他",
+      "value": "zh-Hans",
+      "type": "input",
+      "note": "默认设置为简体中文"
+    }
+
+  ]
+}
