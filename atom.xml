@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jiansing.github.io</id>
     <title>Gridea Theme InlineAMP 演示站</title>
-    <updated>2020-04-24T03:41:28.125Z</updated>
+    <updated>2020-04-24T04:26:29.970Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jiansing.github.io"/>
     <link rel="self" href="https://jiansing.github.io/atom.xml"/>
@@ -17,33 +17,43 @@
         </link>
         <updated>2020-03-18T13:44:25.000Z</updated>
         <summary type="html"><![CDATA[<p>AMP已经提供了对评论的完整支持：<br>
-https://amp.dev/documentation/guides-and-tutorials/develop/login_requiring/add_comment/</p>
+https://amp.dev/documentation/guides-and-tutorials/develop/login_requiring/add_comment/<br>
+建议使用 1.2.1 以上版本</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>AMP已经提供了对评论的完整支持：<br>
-https://amp.dev/documentation/guides-and-tutorials/develop/login_requiring/add_comment/</p>
+https://amp.dev/documentation/guides-and-tutorials/develop/login_requiring/add_comment/<br>
+建议使用 1.2.1 以上版本</p>
 <!-- more -->
-<p>然而大多数评论系统(比如Gitalk)还没有提供兼容AMP HTML的方法<br>
-目前我找到的可以在AMP HTML上无缝使用的评论系统只有两个(可惜在国内都不能正常访问)</p>
-<h2 id="disqus评论">Disqus评论</h2>
-<p>Github上有详细的使用方法：<br>
+<p>然而大多数评论系统(比如 Gitalk )还没有提供兼容 AMP HTML 的方法<br>
+目前我找到的可以在 AMP HTML 上无缝使用的评论系统只有两个(可惜在国内都不能正常访问)</p>
+<h2 id="disqus-评论">Disqus 评论</h2>
+<p>Github 上有详细的使用方法：<br>
 https://github.com/disqus/disqus-install-examples/tree/master/google-amp<br>
-使用Gridea Theme InlineAMP只需要做三件事:</p>
+使用 Gridea Theme InlineAMP 只需要做三件事:</p>
 <ol>
 <li>
-<p>在Gridea评论设置里面<strong><strong>开启评论</strong></strong>并选择<strong><strong>Disqus</strong></strong></p>
+<p>在 Gridea 评论设置里面<strong><strong>开启评论</strong></strong>并选择<strong><strong>Disqus</strong></strong></p>
 </li>
 <li>
-<p>创建一个HTML文件，复制<a href="https://github.com/disqus/disqus-install-examples/tree/master/google-amp#how-to-install">这段内容</a><br>
-将 <strong><strong>s.src = '//EXAMPLE.disqus.com/embed.js';<strong><strong>中的</strong></strong>EXAMPLE</strong></strong>替换为你的Shortname</p>
+<p>创建一个 HTML 文件，复制这段代码：<br>
+<amp-gist data-gistid="b95828a1d288965f3d3d6ba7cd260bc1"
+layout="fixed-height"
+height="241"><br>
+</amp-gist><br>
+将 s.src = '//EXAMPLE.disqus.com/embed.js';中的 EXAMPLE 替换为你的 Shortname。</p>
 </li>
 <li>
-<p>将这个HTML上传到一个托管静态页面的平台(比如Github)，将HTML的URL填写在主题的自定义配置里。注意这个HTML的域名不能是你的blog的域名</p>
+<p>将这个 HTML 上传到一个托管静态页面的平台(比如 Github)，将 HTML 的 URL 填写在主题的自定义配置里。注意这个 HTML 的域名不能是你的 blog 的域名。</p>
+</li>
+<li>
+<p>前往 Disqus 管理后台的设置里面，点击 Advanced，在 Trusted Domains 那里添加你的域名。</p>
 </li>
 </ol>
-<p>##Facebook评论<br>
-在写这一篇使用说明的时候看到的，比Disqus评论系统更方便引入，下一个版本会加入Facebook评论的支持。<br>
-嵌入Facebook评论插件：<br>
-https://amp.dev/documentation/components/amp-facebook-comments/</p>
+<p>##Facebook评论</p>
+<ol>
+<li>在Gridea评论设置里面<strong><strong>开启评论</strong></strong></li>
+<li>在主题的自定义配置里面，选择评论为 Facebook评论 即可，滑动鼠标滑轮可以看到更多自定义配置。</li>
+</ol>
 ]]></content>
     </entry>
     <entry>
