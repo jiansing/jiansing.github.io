@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://jiansing.github.io</id>
+    <id>https://gridea-theme-inlineamp.netlify.app</id>
     <title>Gridea Theme InlineAMP 演示站</title>
-    <updated>2020-04-26T09:13:57.513Z</updated>
+    <updated>2020-07-27T12:41:37.602Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://jiansing.github.io"/>
-    <link rel="self" href="https://jiansing.github.io/atom.xml"/>
+    <link rel="alternate" href="https://gridea-theme-inlineamp.netlify.app"/>
+    <link rel="self" href="https://gridea-theme-inlineamp.netlify.app/atom.xml"/>
     <subtitle>念念不忘，必有回响</subtitle>
-    <logo>https://jiansing.github.io/images/avatar.png</logo>
-    <icon>https://jiansing.github.io/favicon.ico</icon>
+    <logo>https://gridea-theme-inlineamp.netlify.app/images/avatar.png</logo>
+    <icon>https://gridea-theme-inlineamp.netlify.app/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea Theme InlineAMP 演示站</rights>
     <entry>
         <title type="html"><![CDATA[Gridea Theme InlineAMP如何添加评论]]></title>
-        <id>https://jiansing.github.io/add-comment-for-gridea-theme-inlineamp/</id>
-        <link href="https://jiansing.github.io/add-comment-for-gridea-theme-inlineamp/">
+        <id>https://gridea-theme-inlineamp.netlify.app/add-comment-for-gridea-theme-inlineamp/</id>
+        <link href="https://gridea-theme-inlineamp.netlify.app/add-comment-for-gridea-theme-inlineamp/">
         </link>
         <updated>2020-03-18T13:44:25.000Z</updated>
         <summary type="html"><![CDATA[<p>AMP已经提供了对评论的完整支持：<br>
@@ -58,8 +58,8 @@ height="241"><br>
     </entry>
     <entry>
         <title type="html"><![CDATA[Gridea Theme InlineAMP 如何嵌入B站视频]]></title>
-        <id>https://jiansing.github.io/add-video-for-gridea-theme-inlineamp/</id>
-        <link href="https://jiansing.github.io/add-video-for-gridea-theme-inlineamp/">
+        <id>https://gridea-theme-inlineamp.netlify.app/add-video-for-gridea-theme-inlineamp/</id>
+        <link href="https://gridea-theme-inlineamp.netlify.app/add-video-for-gridea-theme-inlineamp/">
         </link>
         <updated>2020-03-18T13:33:24.000Z</updated>
         <summary type="html"><![CDATA[<p><amp-video controls
@@ -89,8 +89,8 @@ https://amp.dev/zh_cn/documentation/guides-and-tutorials/develop/media_iframes_3
     </entry>
     <entry>
         <title type="html"><![CDATA[Gridea Theme InlineAMP 如何嵌入图像，视频和音频]]></title>
-        <id>https://jiansing.github.io/include-images-and-video/</id>
-        <link href="https://jiansing.github.io/include-images-and-video/">
+        <id>https://gridea-theme-inlineamp.netlify.app/include-images-and-video/</id>
+        <link href="https://gridea-theme-inlineamp.netlify.app/include-images-and-video/">
         </link>
         <updated>2020-03-17T03:07:11.000Z</updated>
         <summary type="html"><![CDATA[<p><amp-audio src="https://storage.googleapis.com/media-session/sintel/snow-fight.mp3"
@@ -161,8 +161,8 @@ https://github.com/search?q=markdown+to+AMP</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Gridea Theme InlineAMP (v1.2.0-beta.0)]]></title>
-        <id>https://jiansing.github.io/gridea-theme-inlineamp/</id>
-        <link href="https://jiansing.github.io/gridea-theme-inlineamp/">
+        <id>https://gridea-theme-inlineamp.netlify.app/gridea-theme-inlineamp/</id>
+        <link href="https://gridea-theme-inlineamp.netlify.app/gridea-theme-inlineamp/">
         </link>
         <updated>2020-03-16T12:58:37.000Z</updated>
         <summary type="html"><![CDATA[<p>InlineAMP 是一款纯<a href="https://amp.dev/">AMP</a>主题，设计上简约、干净、响应式，适合喜欢极简设计、比较在意页面打开速度的博主使用。</p>
@@ -253,8 +253,8 @@ https://blog.ofo.moe/add-comment-for-gridea-theme-inlineamp/</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://jiansing.github.io/hello-gridea/</id>
-        <link href="https://jiansing.github.io/hello-gridea/">
+        <id>https://gridea-theme-inlineamp.netlify.app/hello-gridea/</id>
+        <link href="https://gridea-theme-inlineamp.netlify.app/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
